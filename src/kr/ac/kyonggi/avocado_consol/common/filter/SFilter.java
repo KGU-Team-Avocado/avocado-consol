@@ -1,8 +1,5 @@
 package kr.ac.kyonggi.avocado_consol.common.filter;
 
-import com.google.gson.Gson;
-import kr.ac.kyonggi.avocado_consol.handler.dao.user.UserDAO;
-
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
@@ -41,12 +38,6 @@ public class SFilter implements Filter {
              * type이 null인 경우 오류를 방지하기 위해 default 값으로 기타로 지정함.
              * (일부 페이지에서는 JS로 type을 요구하는데, null인 경우 오류가 발생하는 것을 방지)
              * */
-            Gson gson = new Gson();
-            session.setAttribute("type", gson.toJson(UserDAO.getInstance().getType("기타"))); //로그인 하지 않았지만 마치 기타 신분인 것 처럼 만들어준다.
-//            session.setAttribute("headermenulist", gson.toJson(HomeDAO.getInstance().getHeaderMenu()));
-//            session.setAttribute("menulist", gson.toJson(HomeDAO.getInstance().getMenu()));
-//            response.sendRedirect("Index");
-//            return;
         }
 
         chain.doFilter(request, response);

@@ -1,0 +1,3 @@
+DROP DATABASE if EXISTS avocado ;
+CREATE DATABASE avocado DEFAULT CHARACTER SET utf8mb4;
+USE avocado ;
