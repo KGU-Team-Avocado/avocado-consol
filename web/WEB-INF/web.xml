@@ -13,7 +13,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Controller</servlet-name>
-        <url-pattern>*.kgu</url-pattern>
+        <url-pattern>*.avocado</url-pattern>
     </servlet-mapping>
     <filter>
         <filter-name>httpHeaderSecurity</filter-name>
