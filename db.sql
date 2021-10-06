@@ -9,3 +9,4 @@ CREATE TABLE test(
     PRIMARY KEY (`oid`)
 );
 
+INSERT INTO test(oid,title,description,image_url) VALUES(1,'제목','설명','경로');
