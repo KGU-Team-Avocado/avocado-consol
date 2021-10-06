@@ -9,4 +9,12 @@ CREATE TABLE test(
     PRIMARY KEY (`oid`)
 );
 
-INSERT INTO test(oid,title,description,image_url) VALUES(1,'제목','설명','경로');
+INSERT INTO test(oid,title,description,image_url) VALUES(1,'윤주현','설명1','test/윤주현.png');
+INSERT INTO test(title,description,image_url) VALUES('남진수','설명2','경로');
+INSERT INTO test(title,description,image_url) VALUES('한상범','설3명','경로');
+INSERT INTO test(title,description,image_url) VALUES('함현준','설명4','경로');
+INSERT INTO test(title,description,image_url) VALUES('김가영','설명5','경로');
+INSERT INTO test(title,description,image_url) VALUES('박선애','설6명','경로');
+INSERT INTO test(title,description,image_url) VALUES('박소영','설7명','경로');
+
+

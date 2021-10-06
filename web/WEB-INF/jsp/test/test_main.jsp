@@ -14,10 +14,20 @@
     <title>Title</title>
 </head>
 <body>
-git Test를 위한 push
-ㅇㅇㅇㅇㅇㅇ
-ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅁㄴㅇㄻㄴㅁㄴㅁㄴㅁㄴ
-test
-<%=test_data%>
+<div>
+    git Test를 위한 push
+    ㅇㅇㅇㅇㅇㅇ
+    ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅁㄴㅇㄻㄴㅁㄴㅁㄴㅁㄴ
+    test
+</div>
+<div>
+    <%=test_data%>
+</div>
+<hr>
+<%@include file="test_header.jsp"%>
+<div>
+    <a href="test_dynamic.avocado">동적 페이지 테스트</a>
+</div>
+<%@include file="test_footer.jsp"%>
 </body>
 </html>
