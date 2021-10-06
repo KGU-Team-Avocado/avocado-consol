@@ -13,8 +13,8 @@ import java.util.Properties;
 /**
  * SFilter 이후에 실행되는 클래스입니다.
  * 톰캣은 web/WEB-INF/web.xml의 설정에 의해 이 클래스를 실행합니다.
- * 톰캣이 url 요청을 분석했을 때, *.kgu의 패턴이 있었다면 Controller 클래스를 실행하게됩니다.
- * *.kgu패턴은 class.properties에서 검색하고, Action 클래스를 실행하게 됩니다.
+ * 톰캣이 url 요청을 분석했을 때, *.avocado의 패턴이 있었다면 Controller 클래스를 실행하게됩니다.
+ * *.avocado패턴은 class.properties에서 검색하고, Action 클래스를 실행하게 됩니다.
  * Action클래스가 종료될 때 까지 기다렸다가 Action클래스로부터 return 받은 jsp를 분석하여 톰캣으로 return합니다.
  * */
 

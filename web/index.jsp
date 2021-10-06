@@ -13,4 +13,7 @@
   <body>
   $END$
   </body>
+<script>
+  window.location.href='main.avocado';
+</script>
 </html>
