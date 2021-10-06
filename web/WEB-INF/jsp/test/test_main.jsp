@@ -11,9 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-git Test를 위한 push
-ㅇㅇㅇㅇㅇㅇ
-ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅁㄴㅇㄻㄴㅁㄴㅁㄴㅁㄴ
-test
+
 </body>
 </html>
