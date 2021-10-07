@@ -16,5 +16,11 @@ INSERT INTO test(title,description,image_url) VALUES('함현준','설명4','경�
 INSERT INTO test(title,description,image_url) VALUES('김가영','설명5','경로');
 INSERT INTO test(title,description,image_url) VALUES('박선애','설6명','경로');
 INSERT INTO test(title,description,image_url) VALUES('박소영','설7명','경로');
-
+INSERT INTO test(title,description,image_url) VALUES('김도희','설명','경로');
+INSERT INTO test(title,description,image_url) VALUES('김세은','설명','경로');
+INSERT INTO test(title,description,image_url) VALUES('김연수','설명','경로');
+INSERT INTO test(title,description,image_url) VALUES('유윤지','설명','경로');
+INSERT INTO test(title,description,image_url) VALUES('이소현','설명','경로');
+INSERT INTO test(title,description,image_url) VALUES('황세현','설명','경로');
+INSERT INTO test(title,description,image_url) VALUES('이건아','설명','경로');
 
