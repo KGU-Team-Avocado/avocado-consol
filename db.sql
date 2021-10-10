@@ -23,5 +23,3 @@ INSERT INTO test(title,description,image_url) VALUES('유윤지','설명','경�
 INSERT INTO test(title,description,image_url) VALUES('이소현','설명','경로');
 INSERT INTO test(title,description,image_url) VALUES('황세현','설명','경로');
 INSERT INTO test(title,description,image_url) VALUES('이건아','설명','경로');
-
-avocadotesttesttesttest
