@@ -26,6 +26,7 @@
 </div>
 <hr>
 <%@include file="test_header.jsp"%>
+<%@include file="test_header2.jsp"%>
 <div>
     <a href="test_dynamic.avocado">동적 페이지 테스트</a>
 </div>
