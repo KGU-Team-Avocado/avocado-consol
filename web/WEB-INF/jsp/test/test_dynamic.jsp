@@ -27,6 +27,7 @@
                     <a href="#" class="btn btn-secondary my-2">Secondary action</a>
                 </p>
             </div>
+            <a href="test_dynamic2.avocado">테스트 페이지로 이동</a>
         </div>
     </section>
 
@@ -64,7 +65,6 @@
         }
         card.append(text);
     }
-
 
 </script>
 </html>
