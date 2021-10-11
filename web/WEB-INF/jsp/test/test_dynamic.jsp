@@ -57,7 +57,7 @@
                 +'<p class="card-text">'+data[i].description+'</p>'
                 +'<div class="d-flex justify-content-between align-items-center">'
                 +'<div class="btn-group">'
-                +'<button type="button" class="btn btn-sm btn-outline-secondary">View</button>'
+                +'<button type="button" class="btn btn-sm btn-outline-secondary" onclick="location.href=\'test_content.avocado?oid='+data[i].oid+'\'">View</button>'
                 +'<button type="button" class="btn btn-sm btn-outline-danger" onclick="deleteData('+data[i].oid+')">삭제</button>'
                 +'</div>'
                 +'<small class="text-muted">9 mins</small>'

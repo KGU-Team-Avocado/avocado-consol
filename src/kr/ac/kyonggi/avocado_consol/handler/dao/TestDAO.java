@@ -41,6 +41,24 @@ public class TestDAO {
         }.getType());
         return selectedList;
     }
+    public ArrayList<TestDTO> getOneTest(String oid){
+        List<Map<String,Object>> listOfMaps = null;
+        Connection conn = Config.getInstance().sqlLogin();
+        try {
+            QueryRunner queryRunner = new QueryRunner();
+            listOfMaps = queryRunner.query(conn, "SELECT * FROM `test`  WHERE oid = ?", new MapListHandler(), oid);
+        }
+        catch (SQLException se){
+            se.printStackTrace();
+        }
+        finally {
+            DbUtils.closeQuietly(conn);
+        }
+        Gson gson = new Gson();
+        ArrayList<TestDTO> selectedList = gson.fromJson(gson.toJson(listOfMaps), new TypeToken<List<TestDTO>>(){
+        }.getType());
+        return selectedList;
+    }
 
     public String deleteData(String data) {
         Connection conn = Config.getInstance().sqlLogin();
@@ -75,4 +93,5 @@ public class TestDAO {
         }
         return "데이터 추가가 되었습니다.";
     }
+
 }
