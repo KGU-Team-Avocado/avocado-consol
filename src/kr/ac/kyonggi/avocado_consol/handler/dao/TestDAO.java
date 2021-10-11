@@ -42,4 +42,37 @@ public class TestDAO {
         return selectedList;
     }
 
+    public String deleteData(String data) {
+        Connection conn = Config.getInstance().sqlLogin();
+        try {
+            QueryRunner queryRunner = new QueryRunner();
+            queryRunner.update(conn, "DELETE FROM `test` WHERE oid = ?", data);
+        }
+        catch (SQLException se){
+            se.printStackTrace();
+        }
+        finally {
+            DbUtils.closeQuietly(conn);
+        }
+        return "삭제성공";
+    }
+
+    public String addData(String data) {
+        String [] arr = data.split("-/-/-");
+        String title = arr[0];
+        String description = arr[1];
+        String image_url = arr[2];
+        Connection conn = Config.getInstance().sqlLogin();
+        try {
+            QueryRunner queryRunner = new QueryRunner();
+            queryRunner.update(conn, "INSERT INTO `test`(title, description, image_url) VALUES (?,?,?)", title,description,image_url);
+        }
+        catch (SQLException se){
+            se.printStackTrace();
+        }
+        finally {
+            DbUtils.closeQuietly(conn);
+        }
+        return "데이터 추가가 되었습니다.";
+    }
 }

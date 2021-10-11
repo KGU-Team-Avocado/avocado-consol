@@ -23,7 +23,7 @@
                 <h1 class="fw-light">Album example</h1>
                 <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
                 <p>
-                    <a href="#" class="btn btn-primary my-2">Main call to action</a>
+                    <a href="test_add_data.avocado" class="btn btn-primary my-2">데이터 추가하기</a>
                     <a href="#" class="btn btn-secondary my-2">Secondary action</a>
                 </p>
             </div>
@@ -58,12 +58,31 @@
                 +'<div class="d-flex justify-content-between align-items-center">'
                 +'<div class="btn-group">'
                 +'<button type="button" class="btn btn-sm btn-outline-secondary">View</button>'
-                +'<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>'
+                +'<button type="button" class="btn btn-sm btn-outline-danger" onclick="deleteData('+data[i].oid+')">삭제</button>'
                 +'</div>'
                 +'<small class="text-muted">9 mins</small>'
                 +'</div></div></div></div>';
         }
         card.append(text);
+    }
+
+    function deleteData(oid){
+        alert('삭제될 번호는'+oid+'번 입니다.');
+        $.ajax({
+            url:"test_ajax.avocado",
+            type:"post",
+            data:{
+                req: "deleteData",
+                data: oid
+            },
+            success: function (result){
+                if(result=='삭제성공'){
+                    alert('삭제되었습니다.');
+                    location.reload();
+                }
+            }
+        })
+
     }
 
 </script>
