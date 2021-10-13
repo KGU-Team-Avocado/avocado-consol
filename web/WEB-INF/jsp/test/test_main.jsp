@@ -11,7 +11,7 @@
 %>
 <html>
 <head>
-    <title>Title</title>
+    <title>메인</title>
 </head>
 <body>
 <div>
@@ -22,7 +22,7 @@
     TEST
 </div>
 <div>
-    <%=test_data%>
+    <!-- <%=test_data%> -->
 </div>
 <hr>
 <%@include file="test_header.jsp"%>

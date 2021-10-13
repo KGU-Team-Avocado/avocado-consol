@@ -76,7 +76,7 @@ public class TestDAO {
     }
 
     public String addData(String data) {
-        String [] arr = data.split("-/-/-");
+        String [] arr = data.split("-/-/-"); // 받아온 한 줄짜리 데이터를 배열로 쪼개기
         String title = arr[0];
         String description = arr[1];
         String image_url = arr[2];

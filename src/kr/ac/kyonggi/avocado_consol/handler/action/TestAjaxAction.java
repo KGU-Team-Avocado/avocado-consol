@@ -35,6 +35,7 @@ public class TestAjaxAction implements Action {
         String num= request.getParameter("num");
         switch(req) {
             case "deleteData":
+                // System.out.println(data);
                 result= TestDAO.getInstance().deleteData(data);
                 break;
             case "addData":
