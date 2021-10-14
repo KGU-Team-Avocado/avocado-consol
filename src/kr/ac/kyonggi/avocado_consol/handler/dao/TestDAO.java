@@ -94,4 +94,23 @@ public class TestDAO {
         return "데이터 추가가 되었습니다.";
     }
 
+    public String modifyData(String data) {
+        String [] arr = data.split("-/-/-"); // 받아온 한 줄짜리 데이터를 배열로 쪼개기
+        String oid = arr[0];
+        String title = arr[1];
+        String description = arr[2];
+        String image_url = arr[3];
+        Connection conn = Config.getInstance().sqlLogin();
+        try {
+            QueryRunner queryRunner = new QueryRunner();
+            queryRunner.update(conn, "UPDATE `test`SET title=? , description=? , image_url=? WHERE oid=?", title,description,image_url,oid);
+        }
+        catch (SQLException se){
+            se.printStackTrace();
+        }
+        finally {
+            DbUtils.closeQuietly(conn);
+        }
+        return "데이터가 정상적으로 수정되었습니다.";
+    }
 }

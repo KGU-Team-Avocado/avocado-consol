@@ -41,6 +41,9 @@ public class TestAjaxAction implements Action {
             case "addData":
                 result=TestDAO.getInstance().addData(data);
                 break;
+            case "modifyData":
+                result=TestDAO.getInstance().modifyData(data);
+                break;
         }
 
         return result;
