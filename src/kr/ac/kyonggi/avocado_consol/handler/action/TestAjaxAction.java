@@ -44,6 +44,12 @@ public class TestAjaxAction implements Action {
             case "modifyData":
                 result=TestDAO.getInstance().modifyData(data);
                 break;
+            case "guro":
+                result = TestDAO.getInstance().guroTest(data);
+                break;
+            case "deleteGuro":
+                result = TestDAO.getInstance().deleteGuro(data);
+                break;
         }
 
         return result;

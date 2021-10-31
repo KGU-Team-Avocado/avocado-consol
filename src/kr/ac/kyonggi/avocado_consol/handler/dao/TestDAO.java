@@ -113,4 +113,36 @@ public class TestDAO {
         }
         return "데이터가 정상적으로 수정되었습니다.";
     }
+
+    public String guroTest(String data) {
+        //title--dis--img
+        String arr[] = data.split("--");
+        Connection conn = Config.getInstance().sqlLogin();
+        try {
+            QueryRunner queryRunner = new QueryRunner();
+            queryRunner.update(conn, "INSERT INTO `test`(title, description, image_url) VALUES (?,?,?)", arr[0],arr[1],arr[2]);
+        }
+        catch (SQLException se){
+            se.printStackTrace();
+        }
+        finally {
+            DbUtils.closeQuietly(conn);
+        }
+        return "success";
+    }
+
+    public String deleteGuro(String data) {
+        Connection conn = Config.getInstance().sqlLogin();
+        try {
+            QueryRunner queryRunner = new QueryRunner();
+            queryRunner.update(conn, "DELETE FROM `test` WHERE oid = ?", data);
+        }
+        catch (SQLException se){
+            se.printStackTrace();
+        }
+        finally {
+            DbUtils.closeQuietly(conn);
+        }
+        return "success";
+    }
 }

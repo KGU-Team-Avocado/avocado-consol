@@ -11,6 +11,7 @@ public class TestContentAction implements Action {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String oid = (String)request.getParameter("oid");
+        System.out.println(oid);
         if(oid==null){
             return "RequestDispatcher:jsp/test/test_error.jsp";
         }
