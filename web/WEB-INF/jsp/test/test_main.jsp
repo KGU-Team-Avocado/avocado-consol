@@ -16,10 +16,7 @@
 <body>
 <div>
     git Test를 위한 push
-    ㅇㅇㅇㅇㅇㅇ
-    ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅁㄴㅇㄻㄴㅁㄴㅁㄴㅁㄴ
-    test
-    TEST
+    우와
 </div>
 <div>
     <!-- <%=test_data%> -->
