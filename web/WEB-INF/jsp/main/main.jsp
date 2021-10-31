@@ -13,6 +13,9 @@
 <body>
 <div>
     이 페이지는 메인페이지 입니다.
+    안녕하세요 안녕;;
+    dfkfkgjggjl.
+    tpdmsdl
 </div>
 <div>
     <a href="test_main.avocado">테스트 메인으로 이동하기</a>
