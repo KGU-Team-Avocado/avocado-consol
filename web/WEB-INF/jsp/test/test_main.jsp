@@ -33,6 +33,7 @@
 <%@include file="test_header2.jsp"%>
 <div>
     <a href="test_dynamic.avocado">동적 페이지 테스트</a>
+    <a href=""
 </div>
 <%@include file="test_footer.jsp"%>
 </body>
