@@ -93,6 +93,24 @@ public class TestDAO {
         }
         return "데이터 추가가 되었습니다.";
     }
+    public String addtuesdayData(String data) {
+        String [] arr = data.split("-/-/-"); // 받아온 한 줄짜리 데이터를 배열로 쪼개기
+        String title = arr[0];
+        String description = arr[1];
+        String image_url = arr[2];
+        Connection conn = Config.getInstance().sqlLogin();
+        try {
+            QueryRunner queryRunner = new QueryRunner();
+            queryRunner.update(conn, "INSERT INTO `test`(title, description, image_url) VALUES (?,?,?)", title,description,image_url);
+        }
+        catch (SQLException se){
+            se.printStackTrace();
+        }
+        finally {
+            DbUtils.closeQuietly(conn);
+        }
+        return "끝!";
+    }
 
     public String modifyData(String data) {
         String [] arr = data.split("-/-/-"); // 받아온 한 줄짜리 데이터를 배열로 쪼개기
@@ -144,5 +162,19 @@ public class TestDAO {
             DbUtils.closeQuietly(conn);
         }
         return "success";
+    }
+    public String deleteTuesdayData(String data) {
+        Connection conn = Config.getInstance().sqlLogin();
+        try {
+            QueryRunner queryRunner = new QueryRunner();
+            queryRunner.update(conn, "DELETE FROM `test` WHERE oid = ?", data);
+        }
+        catch (SQLException se){
+            se.printStackTrace();
+        }
+        finally {
+            DbUtils.closeQuietly(conn);
+        }
+        return "삭제완료";
     }
 }
