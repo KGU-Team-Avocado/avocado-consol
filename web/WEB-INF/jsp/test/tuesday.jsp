@@ -17,8 +17,8 @@
 <body>
     <%@include file="test_header.jsp"%>
     <b>dfaddfadfasdf</b>
-   ddddd
-   gldad
+    gdgdgdgdgdgd123123123123
+    asdasdasdasd11
     <div id="cards">
         하세요.
     </div>
