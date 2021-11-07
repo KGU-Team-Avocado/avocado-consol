@@ -76,6 +76,7 @@
 <a href="test_main.avocado">테스트 메인으로 이동하기</a>
 <a href="sunday.avocado" type="button" class="btn btn-danger">썬데이 이동하기</a>
 <a href="tuesday.avocado">화요일 이동하기</a>
+<a href="signup.avocado">아직도 회원이 아니세요..?</a>
 
 <!-- Services-->
 <section class="page-section" id="services">

@@ -23,3 +23,32 @@ INSERT INTO test(title,description,image_url) VALUES('유윤지','설명','경�
 INSERT INTO test(title,description,image_url) VALUES('이소현','설명','경로');
 INSERT INTO test(title,description,image_url) VALUES('황세현','설명','경로');
 INSERT INTO test(title,description,image_url) VALUES('이건아','설명','경로');
+
+CREATE TABLE user(
+                     `oid` INT(10) NOT NULL AUTO_INCREMENT,
+                     `id` VARCHAR(20) NOT NULL,
+                     `password` VARCHAR (100) NOT NULL,
+                     `name` VARCHAR (20) NOT NULL,
+                     `birthday` DATE,
+                     `email` VARCHAR (50),
+                     `gender` VARCHAR (5),
+                     `phone` VARCHAR (20),
+                     `type` VARCHAR (10) NOT NULL,
+                     `image_url` VARCHAR (50),
+                     `home` VARCHAR (100),
+                     `register` DATE DEFAULT NULL,
+                     `lastlogin` DATE DEFAULT NULL,
+                     PRIMARY KEY (`oid`)
+);
+
+CREATE TABLE type (
+                     `name` VARCHAR (10) NOT NULL,
+                     `level` INT(2) NOT NULL
+);
+
+INSERT INTO type(name, level) VALUES('전체관리자', 0);
+INSERT INTO type(name, level) VALUES('홈페이지관리자', 1);
+INSERT INTO type(name, level) VALUES('스태프', 2);
+INSERT INTO type(name, level) VALUES('우수회원', 3);
+INSERT INTO type(name, level) VALUES('일반회원', 3);
+INSERT INTO type(name, level) VALUES('미승인회원', 4);
