@@ -52,3 +52,19 @@ INSERT INTO type(name, level) VALUES('스태프', 2);
 INSERT INTO type(name, level) VALUES('우수회원', 3);
 INSERT INTO type(name, level) VALUES('일반회원', 3);
 INSERT INTO type(name, level) VALUES('미승인회원', 4);
+
+CREATE TABLE team (
+                      `oid` INT(10) NOT NULL AUTO_INCREMENT,
+                      `name` VARCHAR(20) NOT NULL,
+                      `group_name` VARCHAR (100) NOT NULL,
+                      `image_url` VARCHAR (100) DEFAULT '#',
+                      `description` VARCHAR(200) DEFAULT '#',
+                      `instagram` VARCHAR (100) DEFAULT '#',
+                      `blog` VARCHAR (100) DEFAULT '#',
+                      `github` VARCHAR (100) DEFAULT '#',
+                            PRIMARY KEY (`oid`)
+);
+INSERT INTO team(oid, name, group_name, image_url, description, instagram, blog, github) VALUES(0, '윤주현', '전체','','','','','');
+INSERT INTO team(name, group_name, image_url, description, instagram, blog, github) VALUES('이소현', '월요일 비대면','','','','','');
+INSERT INTO team(name, group_name, image_url, description, instagram, blog, github) VALUES('황세현', '월요일 비대면','','','','','');
+
