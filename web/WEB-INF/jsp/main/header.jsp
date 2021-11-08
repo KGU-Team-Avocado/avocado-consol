@@ -14,19 +14,19 @@
     <meta name="author" content="" />
     <title>아보카도 콘솔</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="./common/assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/theme/main/assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="./common/css/styles.css" rel="stylesheet" />
+    <link href="/theme/main/css/styles.css" rel="stylesheet" />
 </head>
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand" href="#page-top"><img src="./common/assets/img/navbar-logo.svg" alt="..." /></a>
+        <a class="navbar-brand" href="main.avocado"><img src="/theme/main/assets/img/navbar-logo.svg" alt="..." /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fas fa-bars ms-1"></i>

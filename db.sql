@@ -65,6 +65,17 @@ CREATE TABLE team (
                             PRIMARY KEY (`oid`)
 );
 INSERT INTO team(oid, name, group_name, image_url, description, instagram, blog, github) VALUES(0, '윤주현', '전체','','','','','');
-INSERT INTO team(name, group_name, image_url, description, instagram, blog, github) VALUES('이소현', '월요일 비대면','','','','','');
-INSERT INTO team(name, group_name, image_url, description, instagram, blog, github) VALUES('황세현', '월요일 비대면','','','','','');
+INSERT INTO team(name, group_name, image_url, description, instagram, blog, github) VALUES('이소현', '비대면','','','','','');
+INSERT INTO team(name, group_name, image_url, description, instagram, blog, github) VALUES('황세현', '비대면','','','','','');
+INSERT INTO team(name, group_name, image_url, description, instagram, blog, github) VALUES('이건아', '일요일 토요일','','','','','');
+INSERT INTO team(name, group_name, image_url, description, instagram, blog, github) VALUES('김연수', '일요일 수요일','','','','','');
+INSERT INTO team(name, group_name, image_url, description, instagram, blog, github) VALUES('김도희', '일요일','','','','','');
+INSERT INTO team(name, group_name, image_url, description, instagram, blog, github) VALUES('박소영', '일요일','','','','','');
+INSERT INTO team(name, group_name, image_url, description, instagram, blog, github) VALUES('김세은', '일요일','','','','','');
+INSERT INTO team(name, group_name, image_url, description, instagram, blog, github) VALUES('박선애', '수요일','','','','','');
+INSERT INTO team(name, group_name, image_url, description, instagram, blog, github) VALUES('한상범', '수요일','','','','','');
+INSERT INTO team(name, group_name, image_url, description, instagram, blog, github) VALUES('김가영', '수요일','','','','','');
+INSERT INTO team(name, group_name, image_url, description, instagram, blog, github) VALUES('남진수', '수요일','','','','','');
+INSERT INTO team(name, group_name, image_url, description, instagram, blog, github) VALUES('유윤지', '토요일','','','','','');
+INSERT INTO team(name, group_name, image_url, description, instagram, blog, github) VALUES('함현준', '토요일','','','','','');
 

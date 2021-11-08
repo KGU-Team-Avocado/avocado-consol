@@ -17,15 +17,11 @@
 <!-- Masthead-->
 <header class="masthead">
     <div class="container">
-        <div class="masthead-subheading">Welcome To Our Studio!</div>
-        <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-        <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
+        <div class="masthead-subheading">아보카도 콘솔에 오신 것을 </div>
+        <div class="masthead-heading text-uppercase">환영합니다</div>
+        <a class="btn btn-primary btn-xl text-uppercase" href="loginPage.avocado">로그인</a>
     </div>
 </header>
-<a href="test_main.avocado">테스트 메인으로 이동하기</a>
-<a href="sunday.avocado" type="button" class="btn btn-danger">썬데이 이동하기</a>
-<a href="tuesday.avocado">화요일 이동하기</a>
-<a href="signup.avocado">아직도 회원이 아니세요..?</a>
 
 <!-- Services-->
 <section class="page-section" id="services">
@@ -66,8 +62,8 @@
 <section class="page-section bg-light" id="portfolio">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">Portfolio</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase">패밀리 사이트</h2>
+            <h3 class="section-subheading text-muted">아보카도 콘솔에서 지원하고 있는 홈페이지 입니다.</h3>
         </div>
         <div class="row">
             <div class="col-lg-4 col-sm-6 mb-4">
@@ -77,7 +73,7 @@
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="./common/assets/img/portfolio/1.jpg" alt="..." />
+                        <img class="img-fluid" src="/theme/main/assets/img/portfolio/1.jpg" alt="..." />
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">위드경영컨설팅</div>
@@ -97,7 +93,7 @@
         </div>
         <ul class="timeline">
             <li>
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="./common/assets/img/about/1.jpg" alt="..." /></div>
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="/theme/main/assets/img/about/1.jpg" alt="..." /></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
                         <h4>2009-2011</h4>
@@ -107,7 +103,7 @@
                 </div>
             </li>
             <li class="timeline-inverted">
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="./common/assets/img/about/2.jpg" alt="..." /></div>
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="/theme/main/assets/img/about/2.jpg" alt="..." /></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
                         <h4>March 2011</h4>
@@ -117,7 +113,7 @@
                 </div>
             </li>
             <li>
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="./common/assets/img/about/3.jpg" alt="..." /></div>
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="/theme/main/assets/img/about/3.jpg" alt="..." /></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
                         <h4>December 2015</h4>
@@ -127,7 +123,7 @@
                 </div>
             </li>
             <li class="timeline-inverted">
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="./common/assets/img/about/4.jpg" alt="..." /></div>
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="/theme/main/assets/img/about/4.jpg" alt="..." /></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
                         <h4>July 2020</h4>
@@ -170,16 +166,16 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-3 col-sm-6 my-3">
-                <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="./common/assets/img/logos/microsoft.svg" alt="..." /></a>
+                <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="/theme/main/assets/img/logos/microsoft.svg" alt="..." /></a>
             </div>
             <div class="col-md-3 col-sm-6 my-3">
-                <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="./common/assets/img/logos/google.svg" alt="..." /></a>
+                <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="/theme/main/assets/img/logos/google.svg" alt="..." /></a>
             </div>
             <div class="col-md-3 col-sm-6 my-3">
-                <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="./common/assets/img/logos/facebook.svg" alt="..." /></a>
+                <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="/theme/main/assets/img/logos/facebook.svg" alt="..." /></a>
             </div>
             <div class="col-md-3 col-sm-6 my-3">
-                <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="./common/assets/img/logos/ibm.svg" alt="..." /></a>
+                <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="/theme/main/assets/img/logos/ibm.svg" alt="..." /></a>
             </div>
         </div>
     </div>
@@ -263,7 +259,7 @@
         for(let i = 0; i<data.length; i++){
             text += '<div class="col-lg-4">'
                 + '<div class="team-member">'
-                + '<img class="mx-auto rounded-circle" src="./common/assets/img/team/1.jpg" alt="..." />'
+                + '<img class="mx-auto rounded-circle" src="/theme/main/assets/img/team/1.jpg" alt="..." />'
                 + '<h4>'+data[i].name+'</h4>'
                 + '<p class="text-muted">'+data[i].group_name+'</p>'
                 + '<a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>'
