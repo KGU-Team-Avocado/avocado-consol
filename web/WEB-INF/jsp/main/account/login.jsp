@@ -12,7 +12,7 @@
 <head>
 
     <%--        암호화--%>
-    <script src="js/sha256.js"></script>
+    <script src="/theme/main/js/sha256.js"></script>
 
     <script>
         function letsSubmit() {
@@ -28,6 +28,7 @@
         function doSha(){
             var forsha = $('#id').val() + $('#password').val();
             $('#password_hash').val(SHA256(forsha));
+            alert(SHA256(forsha));
         }
     </script>
 

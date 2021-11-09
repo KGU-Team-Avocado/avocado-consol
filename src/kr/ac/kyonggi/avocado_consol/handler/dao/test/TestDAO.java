@@ -1,4 +1,4 @@
-package kr.ac.kyonggi.avocado_consol.handler.dao;
+package kr.ac.kyonggi.avocado_consol.handler.dao.test;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -179,23 +179,6 @@ public class TestDAO {
         return "삭제완료";
     }
 
-    public ArrayList<TeamDTO> getTeam(){
-        List<Map<String,Object>> listOfMaps = null;
-        Connection conn = Config.getInstance().sqlLogin();
-        try {
-            QueryRunner queryRunner = new QueryRunner();
-            listOfMaps = queryRunner.query(conn, "SELECT * FROM `team`", new MapListHandler());
-        }
-        catch (SQLException se){
-            se.printStackTrace();
-        }
-        finally {
-            DbUtils.closeQuietly(conn);
-        }
-        Gson gson = new Gson();
-        ArrayList<TeamDTO> selectedList = gson.fromJson(gson.toJson(listOfMaps), new TypeToken<List<TeamDTO>>(){
-        }.getType());
-        return selectedList;
-    }
+
 
 }

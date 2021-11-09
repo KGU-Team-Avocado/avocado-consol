@@ -1,4 +1,4 @@
-package kr.ac.kyonggi.avocado_consol.handler.dao;
+package kr.ac.kyonggi.avocado_consol.handler.dao.test;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

@@ -2,7 +2,8 @@ package kr.ac.kyonggi.avocado_consol.handler.action.main;
 
 import com.google.gson.Gson;
 import kr.ac.kyonggi.avocado_consol.common.controller.Action;
-import kr.ac.kyonggi.avocado_consol.handler.dao.TestDAO;
+import kr.ac.kyonggi.avocado_consol.handler.dao.main.HomeDAO;
+import kr.ac.kyonggi.avocado_consol.handler.dao.test.TestDAO;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,7 +17,7 @@ public class MainAction implements Action {
          * */
 
         Gson gson = new Gson();
-        request.setAttribute("team", gson.toJson(TestDAO.getInstance().getTeam()));
+        request.setAttribute("team", gson.toJson(HomeDAO.getInstance().getTeam()));
 
         return "RequestDispatcher:jsp/main/main.jsp";
     }
