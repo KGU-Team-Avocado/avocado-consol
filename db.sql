@@ -64,6 +64,8 @@ CREATE TABLE team (
                       `github` VARCHAR (100) DEFAULT '#',
                             PRIMARY KEY (`oid`)
 );
+
+
 INSERT INTO team(oid, name, group_name, image_url, description, instagram, blog, github) VALUES(0, '윤주현', '전체','','','','','');
 INSERT INTO team(name, group_name, image_url, description, instagram, blog, github) VALUES('이소현', '비대면','','','','','');
 INSERT INTO team(name, group_name, image_url, description, instagram, blog, github) VALUES('황세현', '비대면','','','','','');
