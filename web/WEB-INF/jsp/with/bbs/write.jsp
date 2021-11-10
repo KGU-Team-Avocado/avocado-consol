@@ -56,7 +56,7 @@
                                     <%--버튼이 나와야 하는 자리--%>
                                     <div id="write_post" class="mt-3 d-grid gap-2 d-flex justify-content-between">
                                         <button type="button" class="btn btn-outline-danger" onclick="back()">뒤로</button>
-
+                                        <button type="button" class="btn btn-outline-success" onclick="insertBbs()">추가</button>
                                     </div>
                                 </div>
                             </div>
@@ -174,63 +174,46 @@
     function insertBbs(){
         var title = $('#bbsTitle').val();
         if(title.length == 0){
-            swal.fire({
-                title : '제목을 입력해주세요',
-                icon : 'warning',
-                showConfirmButton: true
-            });
+            alert("제목을 입력해주세요");
             return;
         }
         if(title.length > 200){
-            swal.fire({
-                title : '제목은 200자 이하로 작성하여 주시기바랍니다.',
-                icon : 'warning',
-                showConfirmButton: true
-            });
+            alert("제목은 200자 이하로 작성하여 주시기바랍니다.");
+
             return;
         }
-        var text = CKEDITOR.instances.bbsUpdateContent.getData();
-        if(text.length == 0){
-            swal.fire({
-                title : '내용을 입력해주세요',
-                icon : 'warning',
-                showConfirmButton: true
-            });
+        var content = CKEDITOR.instances.bbsUpdateContent.getData();
+        if(content.length == 0){
+            alert("내용을 입력해주세요");
+
             return;
         }
-        var writer_id = user.id;
-        var writer_name = user.name;
-        var last_modified = formatDate(new Date());
-        var data = major+"-/-/-"+writer_id+"-/-/-"+writer_name+"-/-/-"+title+"-/-/-"+num+"-/-/-"+last_modified+"-/-/-"+text;
+        var writer_id = "테스트 아이디";
+        var writer_name = "김가영";
+        var date = formatDate(new Date());
+        var category = "1"
+        var data = writer_id+"-/-/-"+writer_name+"-/-/-"+title+"-/-/-"+content+"-/-/-"+date+"-/-/-"+category;
         $.ajax({
-            url: 'ajax.kgu',
+            url: 'ajax.avocado',
             type: 'post',
             data: {
                 req: "insertBbs",
                 data: data
             },
             success: function (data) {
-                console.log("error : "+data);
+                console.log("error : " + data);
                 if (data == 'success') {
-                    swal.fire({
-                        title : '내용이 추가되었습니다.',
-                        icon : 'success',
-                        showConfirmButton: true
 
-                    }).then(function (){
-                        location.href = 'bbs.kgu?major=' + major + '&&num=' + num + '&&mode=list';
-                    });
-                } else
-                    swal.fire({
-                        title : '서버에러',
-                        text : '다음에 다시 시도해주세요',
-                        icon : 'error',
-                        showConfirmButton: true
 
-                    });
-            }
-        })
+                    alert("등록에 성공했습니다.");
+                } else {
+
+                    alert("등록에 실패했습니다.");
+
+                }
+            }})
     }
+
 
 
     function modifyBbs(){

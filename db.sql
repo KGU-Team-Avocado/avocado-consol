@@ -83,7 +83,8 @@ INSERT INTO team(name, group_name, image_url, description, instagram, blog, gith
 
 CREATE TABLE bbs (
                      `id` INT(10) NOT NULL AUTO_INCREMENT,
-                     `writer` VARCHAR(100) NOT NULL,
+                     `writer_id` INT(10) NOT NULL,
+                     `writer_name` VARCHAR(100) NOT NULL,
                      `title` VARCHAR(100) NOT NULL,
                      `content` TEXT NOT NULL,
                      `view` INT(10) DEFAULT 0,
@@ -93,5 +94,5 @@ CREATE TABLE bbs (
                      PRIMARY KEY (`id`)
 );
 
-INSERT INTO bbs(writer, title, content, date, category)VALUES('김도희', '제목1', '내용1', '2021-11-10', '카테고리1');
+INSERT INTO bbs(writer_id, writer_name, title, content, date, category)VALUES(1,'김도희', '제목1', '내용1', '2021-11-10', '카테고리1');
 
