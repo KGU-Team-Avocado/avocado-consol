@@ -21,7 +21,7 @@
                 <div class="col-lg-9 col-md-10">
                     <div class="block">
                         <span class="d-block mb-3 text-white text-capitalize">Prepare for new future</span>
-                        <h1 class="animated fadeInUp mb-5">Our work is <br>presentation of our <br>capabilities.</h1>
+                        <h1 class="animated fadeInUp mb-5">Our work is <br>Management consulting<br>for Business.</h1>
                         <a href="#" target="_blank" class="btn btn-main animated fadeInUp btn-round-full" >Get started<i class="btn-icon fa fa-angle-right ml-2"></i></a>
                     </div>
                 </div>
@@ -44,21 +44,21 @@
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="intro-item mb-5 mb-lg-0">
                         <i class="ti-desktop color-one"></i>
-                        <h4 class="mt-4 mb-3">Modern & Responsive design</h4>
+                        <h4 class="mt-4 mb-3">경영전략, 마케팅전략 수립</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, ducimus.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="intro-item mb-5 mb-lg-0">
                         <i class="ti-medall color-one"></i>
-                        <h4 class="mt-4 mb-3">Awarded licensed company</h4>
+                        <h4 class="mt-4 mb-3">소상공인 경영 컨설팅</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, ducimus.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="intro-item">
                         <i class="ti-layers-alt color-one"></i>
-                        <h4 class="mt-4 mb-3">Build your website Professionally</h4>
+                        <h4 class="mt-4 mb-3">인사 노무 계획 수립</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, ducimus.</p>
                     </div>
                 </div>
@@ -129,7 +129,7 @@
                 <div class="col-lg-7 text-center">
                     <div class="section-title">
                         <span class="h6 text-color">Our Services</span>
-                        <h2 class="mt-3 content-title ">We provide a wide range of creative services </h2>
+                        <h2 class="mt-3 content-title ">We provide a wide range of consulting services </h2>
                     </div>
                 </div>
             </div>
@@ -138,7 +138,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="service-item mb-5">
                         <i class="ti-desktop"></i>
-                        <h4 class="mb-3">Web development.</h4>
+                        <h4 class="mb-3">경영전략</h4>
                         <p>A digital agency isn't here to replace your internal team, we're here to partner</p>
                     </div>
                 </div>
@@ -146,7 +146,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="service-item mb-5">
                         <i class="ti-layers"></i>
-                        <h4 class="mb-3">Interface Design.</h4>
+                        <h4 class="mb-3">인사노무</h4>
                         <p>A digital agency isn't here to replace your internal team, we're here to partner</p>
                     </div>
                 </div>
@@ -154,7 +154,15 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="service-item mb-5">
                         <i class="ti-bar-chart"></i>
-                        <h4 class="mb-3">Business Consulting.</h4>
+                        <h4 class="mb-3">마케팅</h4>
+                        <p>A digital agency isn't here to replace your internal team, we're here to partner</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="service-item mb-5 mb-lg-0">
+                        <i class="ti-bar-chart"></i>
+                        <h4 class="mb-3">세무</h4>
                         <p>A digital agency isn't here to replace your internal team, we're here to partner</p>
                     </div>
                 </div>
@@ -162,15 +170,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="service-item mb-5 mb-lg-0">
                         <i class="ti-vector"></i>
-                        <h4 class="mb-3">Branding.</h4>
-                        <p>A digital agency isn't here to replace your internal team, we're here to partner</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="service-item mb-5 mb-lg-0">
-                        <i class="ti-android"></i>
-                        <h4 class="mb-3">App development.</h4>
+                        <h4 class="mb-3">시제품 개발</h4>
                         <p>A digital agency isn't here to replace your internal team, we're here to partner</p>
                     </div>
                 </div>
@@ -178,7 +178,15 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="service-item mb-5 mb-lg-0">
                         <i class="ti-pencil-alt"></i>
-                        <h4 class="mb-3">Content creation.</h4>
+                        <h4 class="mb-3">기술환경분석</h4>
+                        <p>A digital agency isn't here to replace your internal team, we're here to partner</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="service-item mb-5 mb-lg-0">
+                        <i class="ti-pencil-alt"></i>
+                        <h4 class="mb-3">R&D 과제</h4>
                         <p>A digital agency isn't here to replace your internal team, we're here to partner</p>
                     </div>
                 </div>

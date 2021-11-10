@@ -49,9 +49,9 @@
             <div class="col-lg-3 ml-auto col-sm-6">
                 <div class="widget">
                     <div class="logo mb-4">
-                        <h3>Mega<span>kit.</span></h3>
+                        <h3><span>위드</span>경영컨설팅</h3>
                     </div>
-                    <h6><a href="tel:+23-345-67890" >Support@megakit.com</a></h6>
+                    <h6><a href="tel:+23-345-67890" >withMC@gmail.com</a></h6>
                     <a href="mailto:support@gmail.com"><span class="text-color h4">+23-456-6588</span></a>
                 </div>
             </div>
@@ -61,7 +61,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="copyright">
-                        &copy; Copyright Reserved to <span class="text-color">Megakit.</span> by <a href="https://themefisher.com/" target="_blank">Themefisher</a>
+                        &copy; Copyright Reserved to <span class="text-color">with.</span> by <a href="https://themefisher.com/" target="_blank">Themefisher</a>
                     </div>
                 </div>
 

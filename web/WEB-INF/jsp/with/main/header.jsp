@@ -65,7 +65,7 @@
                 <div class="col-lg-10 col-md-8 text-center text-lg-right text-md-right">
                     <div class="header-top-info">
                         <a href="tel:+23-345-67890">Call Us : <span>+23-345-67890</span></a>
-                        <a href="mailto:support@gmail.com" ><i class="fa fa-envelope mr-2"></i><span>support@gmail.com</span></a>
+                        <a href="mailto:support@gmail.com" ><i class="fa fa-envelope mr-2"></i><span>withMC@gmail.com</span></a>
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@
     <nav class="navbar navbar-expand-lg  py-4" id="navbar">
         <div class="container">
             <a class="navbar-brand" href="/withHome.avocado">
-                Mega<span>kit.</span>
+                <span>위드</span>경영컨설팅
             </a>
 
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
