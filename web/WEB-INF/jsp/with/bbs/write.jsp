@@ -54,69 +54,7 @@
                                     <%--버튼이 나와야 하는 자리--%>
                                     <div id="write_post" class="mt-3 d-grid gap-2 d-flex justify-content-between">
                                         <button type="button" class="btn btn-outline-danger" onclick="back()">뒤로</button>
-                                        <c:choose>
-                                            <c:when test="${jsp == '\"bbs_write\"'}">
-                                                <button type="button" class="btn btn-outline-success" onclick="insertBbs()">추가</button>
-                                            </c:when>
-                                            <c:when test="${jsp == '\"bbs_modify\"'}">
-                                                <button type="button" class="btn btn-outline-primary" onclick="modifyBbs()">수정</button>
-                                                <script>
-                                                    var content = $('#bbsUpdateContent');
-                                                    var getBBS = <%=getBBS%>;
-                                                    content.html(getBBS.text);
-                                                    var alreadyFiles = <%=getAllFile%>;
-                                                    $('#bbsTitleBox').html('<input class="form-control" id="bbsTitle" placeholder="제목을 입력하세요." value="'+getBBS.title+'">');
-                                                    if(alreadyFiles.length > 0){
-                                                        var alreadyPanel = $('#alreadyFiles');
-                                                        for(var i = 0 ; i < alreadyFiles.length ; ++i){
-                                                            var value = alreadyFiles[i];
-                                                            alreadyPanel.append('<li class="list-group-item d-flex justify-content-between align-items-center" id="alreadyFileDiv' + i + '">' + value.original_FileName + '<a onclick="alreadyDelete(' + i + ')"><i class="bi bi-x-lg"></i></a></li>')
-                                                        }
-                                                    }
-                                                    function alreadyDelete(index){
-                                                        var value = alreadyFiles[index];
-                                                        swal.fire({
-                                                            title: '정말로 파일을 삭제하시나요?',
-                                                            text: '다시 되돌릴 수 없습니다.',
-                                                            icon: 'warning',
-                                                            showConfirmButton: true,
-                                                            showCancelButton: true
-                                                        }).then((result) => {
-                                                            if (result.isConfirmed) {
-                                                                $.ajax({
-                                                                    url: 'ajax.kgu',
-                                                                    type: 'post',
-                                                                    data: {
-                                                                        req: "deleteBbsAlreadyFile",
-                                                                        data: value.id
-                                                                    },
-                                                                    success: function (data) {
-                                                                        if (data == "success") {
-                                                                            $('#alreadyFileDiv' + index).remove();
-                                                                            swal.fire({
-                                                                                title: '파일이 삭제되었습니다.',
-                                                                                icon: 'success',
-                                                                                showConfirmButton: true
-                                                                            }).then(function (){
-                                                                                location.href = 'bbs.kgu?major=' + major + '&&num=' + num + '&&mode=list';
-                                                                            });
-                                                                        } else {
-                                                                            swal.fire({
-                                                                                title: '서버에러',
-                                                                                text: '다음에 다시 시도해주세요',
-                                                                                icon: 'error',
-                                                                                showConfirmButton: true
-                                                                            });
-                                                                            return;
-                                                                        }
-                                                                    }
-                                                                })
-                                                            }
-                                                        });
-                                                    }
-                                                </script>
-                                            </c:when>
-                                        </c:choose>
+
                                     </div>
                                 </div>
                             </div>
@@ -205,7 +143,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+
     </section>
     <%@include file="../main/footer.jsp"%>
 </div>
