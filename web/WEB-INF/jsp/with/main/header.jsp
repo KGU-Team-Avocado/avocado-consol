@@ -15,16 +15,31 @@
 
     <meta name="author" content="themefisher.com">
 
-    <title>Megakit| Html5 Agency template</title>
+    <%--    jQuery    --%>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<%--    &lt;%&ndash;    Bootstrap    &ndash;%&gt;--%>
+<%--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">--%>
+<%--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>--%>
+
+
+    <script src="/static/adminlet-2.4.10/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="/static/adminlet-2.4.10/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
+    <%--    Bootstrap Table    --%>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css">
+    <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
 
     <!-- bootstrap.min css -->
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css">
     <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
     <link rel="stylesheet" href="/theme/with/plugins/bootstrap/css/bootstrap.min.css">
+
     <!-- Icon Font Css -->
     <link rel="stylesheet" href="/theme/with/plugins/themify/css/themify-icons.css">
     <link rel="stylesheet" href="/theme/with/plugins/fontawesome/css/all.css">
     <link rel="stylesheet" href="/theme/with/plugins/magnific-popup/dist/magnific-popup.css">
+
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="/theme/with/plugins/slick-carousel/slick/slick.css">
     <link rel="stylesheet" href="/theme/with/plugins/slick-carousel/slick/slick-theme.css">

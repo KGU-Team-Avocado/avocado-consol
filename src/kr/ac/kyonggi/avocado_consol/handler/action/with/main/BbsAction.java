@@ -12,17 +12,14 @@ public class BbsAction implements Action {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
         Gson gson = new Gson();
-
-
         String mode = request.getParameter("mode");
-        System.out.println(mode);
 
-        if (mode == null) {
+        if(mode == null) {
             mode = "list";
         }
 
-        if (mode.equals("list")) {
-            request.setAttribute("bbs_list", gson.toJson(BbsDAO.getInstance().getBbs()));
+        if(mode.equals("list")) {
+            request.setAttribute("getBBSList", gson.toJson(BbsDAO.getInstance().getBbs()));
             return "RequestDispatcher:jsp/with/bbs/list.jsp";
         } else if (mode.equals("view")) {
             return "RequestDispatcher:jsp/with/bbs/view.jsp";
@@ -31,5 +28,6 @@ public class BbsAction implements Action {
         } else {
             return "RequestDispatcher:jsp/with/bbs/modify.jsp";
         }
+
     }
 }

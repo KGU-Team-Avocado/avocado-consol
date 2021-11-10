@@ -3,6 +3,7 @@ package kr.ac.kyonggi.avocado_consol.handler.dto;
 import java.sql.Date;
 
 public class BbsDTO {
+
     public String id;
     public String writer;
     public String title;
