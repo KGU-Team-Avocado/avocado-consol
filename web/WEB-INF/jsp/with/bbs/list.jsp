@@ -6,12 +6,14 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%
+    String bbs_list = (String)request.getAttribute("bbs_list");
+    System.out.println(bbs_list);
+%>
+
+
 <html>
-<head>
-    <title>Title</title>
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css">
-    <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
-</head>
 <body>
 <%@include file="../main/header.jsp"%>
 <div class="main-wrapper ">
@@ -33,8 +35,6 @@
         </div>
     </section>
 
-
-
     <section class="section blog-wrap bg-gray">
         <div class="container">
             <table class="boardtable" id="table1"  data-toggle="table"
@@ -55,7 +55,51 @@
             </table>
         </div>
     </section>
-    <%@include file="../main/footer.jsp"%>
 </div>
+<%@include file="../main/footer.jsp"%>
 </body>
 </html>
+
+
+<script>
+    $(document).ready(function (){
+        makeList();
+    })
+    function formatDate(date) {  //주어진 날짜를 yyyy-mm-dd 형식으로 반환해주는 함수
+        var d = new Date(date),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+
+        if (month.length < 2) month = '0' + month;
+        if (day.length < 2) day = '0' + day;
+
+        return [year, month, day].join('-');
+    }
+    function makeList(){
+        $('#table1').bootstrapTable('load',tableData());
+        // $('#table1').bootstrapTable('append',data());
+        $('#table1').bootstrapTable('refresh');
+    }
+    function tableData(){
+
+        var bbsList = <%=bbs_list%>;
+        console.log(bbsList)
+        var rows = [];
+        if(bbsList!=null){
+            for(var i=0;i<bbsList.length;i++){
+                var bbs=bbsList[i];
+                var url = 'bbs.avocado?mode=view'+'&&id='+bbs.id;
+                rows.push({
+                    id: '<a href="'+url+'">'+bbs.id+'</a>',
+                    title: '<a href="'+url+'">'+bbs.title+'</a>',
+                    writer_name: '<a href="'+url+'">'+bbs.writer+'</a>',
+                    last_modified: '<a href="'+url+'">'+formatDate(bbs.date)+'</a>',
+                    views: '<a href="'+url+'">'+bbs.view+'</a>',
+                });
+            }
+        }
+        return rows;
+    }
+
+</script>
