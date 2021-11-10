@@ -79,3 +79,17 @@ INSERT INTO team(name, group_name, image_url, description, instagram, blog, gith
 INSERT INTO team(name, group_name, image_url, description, instagram, blog, github) VALUES('유윤지', '토요일','','','','','');
 INSERT INTO team(name, group_name, image_url, description, instagram, blog, github) VALUES('함현준', '토요일','','','','','');
 
+CREATE TABLE bbs (
+                     `id` INT(10) NOT NULL AUTO_INCREMENT,
+                     `writer` VARCHAR(100) NOT NULL,
+                     `title` VARCHAR(100) NOT NULL,
+                     `content` TEXT NOT NULL,
+                     `view` INT(10) DEFAULT 0,
+                     `date` DATETIME NOT NULL,
+                     `category` VARCHAR(100) NOT NULL,
+                     `level` INT(10) DEFAULT 0,
+                     PRIMARY KEY (`id`)
+);
+
+INSERT INTO bbs(writer, title, content, date, category)VALUES('김도희', '제목1', '내용1', '2021-11-10', '카테고리1');
+
