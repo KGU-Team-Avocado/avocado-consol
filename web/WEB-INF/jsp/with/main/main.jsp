@@ -8,8 +8,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
-
-
 <body>
 <%@include file="header.jsp"%>
 
@@ -352,7 +350,6 @@
                 </div>
             </div>
         </div>
-
     </section>
 
 
