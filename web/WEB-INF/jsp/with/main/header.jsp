@@ -73,7 +73,7 @@
     </div>
     <nav class="navbar navbar-expand-lg  py-4" id="navbar">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="/withHome.avocado">
                 Mega<span>kit.</span>
             </a>
 
