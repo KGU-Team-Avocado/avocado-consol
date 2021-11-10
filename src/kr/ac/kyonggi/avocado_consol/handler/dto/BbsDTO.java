@@ -5,7 +5,7 @@ import java.sql.Date;
 public class BbsDTO {
 
     public String id;
-    public String writer;
+    public String writer_name;
     public String title;
     public String content;
     public String view;
@@ -22,11 +22,11 @@ public class BbsDTO {
     }
 
     public String getWriter() {
-        return writer;
+        return writer_name;
     }
 
     public void setWriter(String writer) {
-        this.writer = writer;
+        this.writer_name = writer;
     }
 
     public String getTitle() {
