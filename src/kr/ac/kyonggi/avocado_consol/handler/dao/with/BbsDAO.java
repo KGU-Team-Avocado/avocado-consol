@@ -38,11 +38,10 @@ public class BbsDAO {
         finally {
             DbUtils.closeQuietly(conn);
         }
+        System.out.println(listOfMaps);
         Gson gson = new Gson();
-        ArrayList<BbsDTO> selectedList = gson.fromJson(gson.toJson(listOfMaps), new TypeToken<List<BbsDTO>>(){
-        }.getType());
-        System.out.print(listOfMaps);
-        System.out.print(selectedList);
-        return selectedList;
+        ArrayList<BbsDTO> selected = gson.fromJson(gson.toJson(listOfMaps), new TypeToken<List<BbsDTO>>() {}.getType());
+
     }
+
 }

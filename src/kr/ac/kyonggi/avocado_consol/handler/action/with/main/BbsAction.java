@@ -17,25 +17,19 @@ public class BbsAction implements Action {
         String mode = request.getParameter("mode");
         System.out.println(mode);
 
-        if(mode==null){
-            mode="list";
+        if (mode == null) {
+            mode = "list";
         }
 
-
-        if(mode.equals("view")){
+        if (mode.equals("list")) {
+            request.setAttribute("bbs_list", gson.toJson(BbsDAO.getInstance().getBbs()));
+            return "RequestDispatcher:jsp/with/bbs/list.jsp";
+        } else if (mode.equals("view")) {
             return "RequestDispatcher:jsp/with/bbs/view.jsp";
-        }
-        else if(mode.equals("write")){
+        } else if (mode.equals("write")) {
             return "RequestDispatcher:jsp/with/bbs/write.jsp";
-        }
-        else if(mode.equals("modify")){
+        } else {
             return "RequestDispatcher:jsp/with/bbs/modify.jsp";
         }
-        else {
-            request.setAttribute("bbs_list", gson.toJson(BbsDAO.getInstance().getBbs()));
-            System.out.println(gson.toJson(BbsDAO.getInstance().getBbs()));
-            return "RequestDispatcher:jsp/with/bbs/list.jsp";
-        }
     }
-
 }
