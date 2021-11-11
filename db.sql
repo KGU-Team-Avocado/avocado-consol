@@ -40,7 +40,7 @@ CREATE TABLE user(
                      `lastlogin` DATE DEFAULT NULL,
                      PRIMARY KEY (`oid`)
 );
-INSERT INTO user(oid, id, password, name, birthday, email, gender, phone, type, image_url, home) VALUES(0, 'admin', '','관리자','2021-11-10','admin@email.com','무','010-0000-0000','전체관리자', '', '');
+INSERT INTO user(oid, id, password, name, birthday, email, gender, phone, type, image_url, home) VALUES(0, 'admin', 'd82494f05d6917ba02f7aaa29689ccb444bb73f20380876cb05d1f37537b7892','관리자','2021-11-10','admin@email.com','무','010-0000-0000','전체관리자', '', '');
 CREATE TABLE type (
                      `name` VARCHAR (10) NOT NULL,
                      `level` INT(2) NOT NULL

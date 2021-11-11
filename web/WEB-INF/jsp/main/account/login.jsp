@@ -28,7 +28,6 @@
         function doSha(){
             var forsha = $('#id').val() + $('#password').val();
             $('#password_hash').val(SHA256(forsha));
-            alert(SHA256(forsha));
         }
     </script>
 

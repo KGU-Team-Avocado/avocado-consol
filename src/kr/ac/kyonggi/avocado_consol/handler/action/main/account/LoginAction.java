@@ -39,7 +39,7 @@ public class LoginAction implements Action {
                 return "";
             }
         }
-        return "RequestDispatcher:jsp/account/login.jsp";
+        return "RequestDispatcher:jsp/main/account/login.jsp";
     }
 
 }

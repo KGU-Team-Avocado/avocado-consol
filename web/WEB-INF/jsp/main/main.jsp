@@ -7,19 +7,28 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    String team = (String)request.getAttribute("team");
+    String team = (String)session.getAttribute("team");
 %>
-
 <!DOCTYPE html>
 <html lang="en">
 <body id="page-top">
-<%@include file="header.jsp"%>
+<%@include file="header.jsp" %>
 <!-- Masthead-->
 <header class="masthead">
     <div class="container">
-        <div class="masthead-subheading">아보카도 콘솔에 오신 것을 </div>
+        <div class="masthead-subheading">아보카도 콘솔에 오신 것을</div>
         <div class="masthead-heading text-uppercase">환영합니다</div>
+        <%
+            if (user == null) {
+        %>
         <a class="btn btn-primary btn-xl text-uppercase" href="loginPage.avocado">로그인</a>
+        <%
+            } else {
+        %>
+        <a class="btn btn-primary btn-xl text-uppercase" href="logout.avocado">로그아웃</a>
+        <%
+            }
+        %>
     </div>
 </header>
 
@@ -73,7 +82,7 @@
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="/theme/main/assets/img/portfolio/1.jpg" alt="..." />
+                        <img class="img-fluid" src="/theme/main/assets/img/portfolio/1.jpg" alt="..."/>
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">위드경영컨설팅</div>
@@ -88,7 +97,7 @@
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="/theme/main/assets/img/portfolio/1.jpg" alt="..." />
+                        <img class="img-fluid" src="/theme/main/assets/img/portfolio/1.jpg" alt="..."/>
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">AI컴퓨터공학부 컴퓨터공학전공</div>
@@ -103,7 +112,7 @@
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="/theme/main/assets/img/portfolio/1.jpg" alt="..." />
+                        <img class="img-fluid" src="/theme/main/assets/img/portfolio/1.jpg" alt="..."/>
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">AI컴퓨터공학부 인공지능전공</div>
@@ -118,7 +127,7 @@
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="/theme/main/assets/img/portfolio/1.jpg" alt="..." />
+                        <img class="img-fluid" src="/theme/main/assets/img/portfolio/1.jpg" alt="..."/>
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">소프트웨어중심대학 SWAIG</div>
@@ -138,7 +147,8 @@
         </div>
         <ul class="timeline">
             <li>
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="/theme/main/assets/img/about/1.jpg" alt="..." /></div>
+                <div class="timeline-image"><img class="rounded-circle img-fluid"
+                                                 src="/theme/main/assets/img/about/1.jpg" alt="..."/></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
                         <h4>2021.08</h4>
@@ -148,7 +158,8 @@
                 </div>
             </li>
             <li class="timeline-inverted">
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="/theme/main/assets/img/about/2.jpg" alt="..." /></div>
+                <div class="timeline-image"><img class="rounded-circle img-fluid"
+                                                 src="/theme/main/assets/img/about/2.jpg" alt="..."/></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
                         <h4>2021.09</h4>
@@ -158,7 +169,8 @@
                 </div>
             </li>
             <li>
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="/theme/main/assets/img/about/3.jpg" alt="..." /></div>
+                <div class="timeline-image"><img class="rounded-circle img-fluid"
+                                                 src="/theme/main/assets/img/about/3.jpg" alt="..."/></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
                         <h4>2021.10</h4>
@@ -168,7 +180,8 @@
                 </div>
             </li>
             <li class="timeline-inverted">
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="/theme/main/assets/img/about/4.jpg" alt="..." /></div>
+                <div class="timeline-image"><img class="rounded-circle img-fluid"
+                                                 src="/theme/main/assets/img/about/4.jpg" alt="..."/></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
                         <h4>2021.10</h4>
@@ -196,7 +209,7 @@
             <h2 class="section-heading text-uppercase">Team Members</h2>
             <h3 class="section-subheading text-muted">아보카도 콘솔 팀원을 소개합니다.</h3>
         </div>
-<%--        팀원 명단이 등장할 위치 --%>
+        <%--        팀원 명단이 등장할 위치 --%>
         <div class="row" id="team_members"></div>
         <div class="row">
             <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">함께 하실 분들을 찾습니다.</p></div>
@@ -208,16 +221,20 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-3 col-sm-6 my-3">
-                <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="/theme/main/assets/img/logos/microsoft.svg" alt="..." /></a>
+                <a href="#!"><img class="img-fluid img-brand d-block mx-auto"
+                                  src="/theme/main/assets/img/logos/microsoft.svg" alt="..."/></a>
             </div>
             <div class="col-md-3 col-sm-6 my-3">
-                <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="/theme/main/assets/img/logos/google.svg" alt="..." /></a>
+                <a href="#!"><img class="img-fluid img-brand d-block mx-auto"
+                                  src="/theme/main/assets/img/logos/google.svg" alt="..."/></a>
             </div>
             <div class="col-md-3 col-sm-6 my-3">
-                <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="/theme/main/assets/img/logos/facebook.svg" alt="..." /></a>
+                <a href="#!"><img class="img-fluid img-brand d-block mx-auto"
+                                  src="/theme/main/assets/img/logos/facebook.svg" alt="..."/></a>
             </div>
             <div class="col-md-3 col-sm-6 my-3">
-                <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="/theme/main/assets/img/logos/ibm.svg" alt="..." /></a>
+                <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="/theme/main/assets/img/logos/ibm.svg"
+                                  alt="..."/></a>
             </div>
         </div>
     </div>
@@ -241,25 +258,30 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <!-- Name input-->
-                        <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
+                        <input class="form-control" id="name" type="text" placeholder="Your Name *"
+                               data-sb-validations="required"/>
                         <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                     </div>
                     <div class="form-group">
                         <!-- Email address input-->
-                        <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
+                        <input class="form-control" id="email" type="email" placeholder="Your Email *"
+                               data-sb-validations="required,email"/>
                         <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                         <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                     </div>
                     <div class="form-group mb-md-0">
                         <!-- Phone number input-->
-                        <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
-                        <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                        <input class="form-control" id="phone" type="tel" placeholder="Your Phone *"
+                               data-sb-validations="required"/>
+                        <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group form-group-textarea mb-md-0">
                         <!-- Message input-->
-                        <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
+                        <textarea class="form-control" id="message" placeholder="Your Message *"
+                                  data-sb-validations="required"></textarea>
                         <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                     </div>
                 </div>
@@ -272,7 +294,7 @@
                 <div class="text-center text-white mb-3">
                     <div class="fw-bolder">Form submission successful!</div>
                     To activate this form, sign up at
-                    <br />
+                    <br/>
                     <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                 </div>
             </div>
@@ -280,17 +302,23 @@
             <!---->
             <!-- This is what your users will see when there is-->
             <!-- an error submitting the form-->
-            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+            <div class="d-none" id="submitErrorMessage">
+                <div class="text-center text-danger mb-3">Error sending message!</div>
+            </div>
             <!-- Submit Button-->
-            <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
+            <div class="text-center">
+                <button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send
+                    Message
+                </button>
+            </div>
         </form>
     </div>
 </section>
 
-<%@include file="footer.jsp"%>
+<%@include file="footer.jsp" %>
 </body>
 <script>
-    $(document).ready(function (){
+    $(document).ready(function () {
         makeCards();
     })
 
@@ -298,12 +326,12 @@
         let data = <%=team%>;
         let card = $('#team_members');
         let text = '';
-        for(let i = 0; i<data.length; i++){
+        for (let i = 0; i < data.length; i++) {
             text += '<div class="col-lg-4">'
                 + '<div class="team-member">'
                 + '<img class="mx-auto rounded-circle" src="/theme/main/assets/img/team/1.jpg" alt="..." />'
-                + '<h4>'+data[i].name+'</h4>'
-                + '<p class="text-muted">'+data[i].group_name+'</p>'
+                + '<h4>' + data[i].name + '</h4>'
+                + '<p class="text-muted">' + data[i].group_name + '</p>'
                 + '<a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>'
                 + '<a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>'
                 + '<a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>'
