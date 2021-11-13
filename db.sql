@@ -96,3 +96,12 @@ CREATE TABLE bbs (
 
 INSERT INTO bbs(writer_id, writer_name, title, content, date, category)VALUES(1,'김도희', '제목1', '내용1', '2021-11-10', '카테고리1');
 
+CREATE TABLE information (
+                             `id` INT(10) NOT NULL,
+                             `content` TEXT NOT NULL,
+                             PRIMARY KEY (`id`)
+);
+INSERT INTO information(id, content) VALUE(10, 'test10');
+INSERT INTO information(id, content) VALUE(11, 'test11');
+INSERT INTO information(id, content) VALUE(12, 'test12');
+INSERT INTO information(id, content) VALUE(13, 'test13');

@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% String user = (String)session.getAttribute("user"); %>
 <head>
 
     <!-- Required meta tags -->
@@ -89,8 +90,10 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
                         <ul class="dropdown-menu" aria-labelledby="dropdown03">
-                            <li><a class="dropdown-item" href="about.html">Our company</a></li>
-                            <li><a class="dropdown-item" href="pricing.html">Pricing</a></li>
+                            <li><a class="dropdown-item" href="information.avocado?num=10">회사소개</a></li>
+                            <li><a class="dropdown-item" href="information.avocado?num=11">연혁</a></li>
+                            <li><a class="dropdown-item" href="information.avocado?num=12">컨설팅절차</a></li>
+                            <li><a class="dropdown-item" href="information.avocado?num=13">컨설팅목표</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
