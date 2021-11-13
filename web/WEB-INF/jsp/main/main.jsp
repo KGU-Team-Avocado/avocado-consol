@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    String team = (String)session.getAttribute("team");
+    String team = (String)request.getAttribute("team");
 %>
 <!DOCTYPE html>
 <html lang="en">

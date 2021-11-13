@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <script src="/theme/main/js/sha256.js"></script>
     <title>Title</title>
 </head>
 <body>
@@ -105,6 +106,8 @@
     function signup(){
         let id = $('#id').val();
         let password = $('#password').val();
+        let forsha = id+password;
+        let hashcode = SHA256(forsha);
         let name = $('#name').val();
         let Birthday = $('#Birthday').val();
         let gender = $('#gender').val();
@@ -114,7 +117,7 @@
         let image = $('#image').val();
         let home = $('#home').val();
         let time = new Date();
-        let text = id+'-/-/-'+password+'-/-/-'+name+'-/-/-'+Birthday+'-/-/-'+gender+'-/-/-'+email+'-/-/-'+phone+'-/-/-'+type+'-/-/-'+image+'-/-/-'+home+'-/-/-'+time;
+        let text = id+'-/-/-'+hashcode+'-/-/-'+name+'-/-/-'+Birthday+'-/-/-'+gender+'-/-/-'+email+'-/-/-'+phone+'-/-/-'+type+'-/-/-'+image+'-/-/-'+home+'-/-/-'+time;
         $.ajax({
                 url:"ajax.avocado",
                 type : "POST",

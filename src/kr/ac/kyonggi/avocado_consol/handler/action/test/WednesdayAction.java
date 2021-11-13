@@ -9,6 +9,7 @@ public class WednesdayAction implements Action {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
         return "RequestDispatcher:jsp/test/wednesday.jsp";
     }
 }
