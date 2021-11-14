@@ -83,7 +83,7 @@ INSERT INTO team(name, group_name, image_url, description, instagram, blog, gith
 
 CREATE TABLE bbs (
                      `id` INT(10) NOT NULL AUTO_INCREMENT,
-                     `writer_id` INT(10) NOT NULL,
+                     `writer_id` VARCHAR(100) NOT NULL,
                      `writer_name` VARCHAR(100) NOT NULL,
                      `title` VARCHAR(100) NOT NULL,
                      `content` TEXT NOT NULL,
