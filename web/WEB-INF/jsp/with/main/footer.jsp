@@ -88,7 +88,7 @@ Essential Scripts
 
 
 <!-- Main jQuery -->
-<script src="/theme/with/plugins/jquery/jquery.js"></script>
+<%--<script src="/theme/with/plugins/jquery/jquery.js"></script>--%>
 <script src="/theme/with/js/contact.js"></script>
 <!-- Bootstrap 4.3.1 -->
 <script src="/theme/with/plugins/bootstrap/js/popper.js"></script>

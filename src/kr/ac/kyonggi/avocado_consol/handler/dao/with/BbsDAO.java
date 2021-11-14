@@ -60,7 +60,7 @@ public class BbsDAO {
             DbUtils.closeQuietly(conn);
         }
         Gson gson = new Gson();
-        System.out.println("ddd");
+//        System.out.println("ddd");
         ArrayList<BbsDTO> selectedList = gson.fromJson(gson.toJson(listOfMaps), new TypeToken<List<BbsDTO>>(){
         }.getType());
         if(selectedList.size()>0) {
@@ -69,6 +69,33 @@ public class BbsDAO {
         else
             return null;
     }
+
+    public String insertBbs(String data) {
+        String [] arr = data.split("-/-/-"); // 받아온 한 줄짜리 데이터를 배열로 쪼개기
+
+        String writer_id = arr[0];
+        String writer_name = arr[1];
+        String title = arr[2];
+        String content = arr[3];
+        String date = arr[4];
+        String category = arr[5];
+
+        Connection conn = Config.getInstance().sqlLogin();
+        try {
+            QueryRunner queryRunner = new QueryRunner();
+            queryRunner.update(conn,
+                    "INSERT INTO `bbs`(writer_id, writer_name, title, content, date, category) " +
+                            "VALUES (?,?,?,?,?,?)", writer_id,writer_name,title,content,date,category);
+        }
+        catch (SQLException se){
+            se.printStackTrace();
+        }
+        finally {
+            DbUtils.closeQuietly(conn);
+        }
+        return "글작성에 성공하였습니다.";
+    }
+
 
 
 }

@@ -27,7 +27,7 @@ public class BbsAction implements Action {
                 return "RequestDispatcher:jsp/with/bbs/list.jsp";
             }
             request.setAttribute("getBBS", gson.toJson(BbsDAO.getInstance().getOneBbs(id)));
-            System.out.println(BbsDAO.getInstance().getOneBbs(id));
+//            System.out.println(BbsDAO.getInstance().getOneBbs(id));
             return "RequestDispatcher:jsp/with/bbs/view.jsp";
         } else if (mode.equals("write")) {
             return "RequestDispatcher:jsp/with/bbs/write.jsp";

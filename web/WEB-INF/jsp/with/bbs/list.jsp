@@ -44,6 +44,9 @@
 <%--                </thead>--%>
 <%--            </table>--%>
         </div>
+
+        <a class="btn btn-secondary" href="bbs.avocado?mode=write">글 작성하기</a>
+
     </section>
 </div>
 <%@include file="../main/footer.jsp"%>
@@ -103,5 +106,7 @@
     <%--    }--%>
     <%--    return rows;--%>
     <%--}--%>
+
+
 
 </script>

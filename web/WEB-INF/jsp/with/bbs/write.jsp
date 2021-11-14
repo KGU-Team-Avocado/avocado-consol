@@ -153,6 +153,8 @@
 </body>
 
 <script>
+    var user = <%=user%>;
+
     //뒤로가기로 업로드 페이지 접근할 수 없도록 막음
     window.history.forward();
     function noBack() {
@@ -162,7 +164,6 @@
     <%--var major = <%=major%>;--%>
     <%--var num = <%=num%>;--%>
     <%--var id = <%=id%>;--%>
-    <%--var user = <%=user%>;--%>
     <%--var type = <%=type%>;--%>
 
     CKEDITOR.replace('bbsUpdateContent', {
@@ -188,11 +189,12 @@
 
             return;
         }
-        var writer_id = "테스트 아이디";
-        var writer_name = "김가영";
+        var writer_id = user.id;
+        var writer_name = user.name;
         var date = formatDate(new Date());
         var category = "1"
         var data = writer_id+"-/-/-"+writer_name+"-/-/-"+title+"-/-/-"+content+"-/-/-"+date+"-/-/-"+category;
+        alert(data);
         $.ajax({
             url: 'ajax.avocado',
             type: 'post',
@@ -201,16 +203,8 @@
                 data: data
             },
             success: function (data) {
-                console.log("error : " + data);
-                if (data == 'success') {
-
-
-                    alert("등록에 성공했습니다.");
-                } else {
-
-                    alert("등록에 실패했습니다.");
-
-                }
+                alert(data);
+                location.href="bbs.avocado?mode=list";
             }})
     }
 

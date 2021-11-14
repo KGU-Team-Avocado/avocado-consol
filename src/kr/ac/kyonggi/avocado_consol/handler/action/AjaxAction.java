@@ -4,6 +4,7 @@ package kr.ac.kyonggi.avocado_consol.handler.action;
 import com.google.gson.Gson;
 import kr.ac.kyonggi.avocado_consol.common.controller.Action;
 import kr.ac.kyonggi.avocado_consol.handler.dao.user.UserDAO;
+import kr.ac.kyonggi.avocado_consol.handler.dao.with.BbsDAO;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -26,9 +27,16 @@ public class AjaxAction implements Action {
         HttpSession session = request.getSession(); //Session에 있는 정보로 뭔가 해야할 때 사용
         String data = request.getParameter("data"); //JSP에서 넘겨준 data
         String result=null;
+        System.out.println(req);
+        System.out.println(data);
+
         switch(req) {
             case "signup":
                 result= UserDAO.getInstance().addUser(data);
+                break;
+            case "insertBbs":
+                System.out.println(data);
+                result= BbsDAO.getInstance().insertBbs(data);
                 break;
         }
 
