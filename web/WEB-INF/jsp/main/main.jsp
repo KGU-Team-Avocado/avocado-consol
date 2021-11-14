@@ -19,17 +19,6 @@
         <div class="masthead-subheading">아보카도 콘솔에 오신 것을</div>
         <div class="masthead-heading text-uppercase">환영합니다</div>
         <div id="loginInfo"></div>
-        <%
-            if (user == null) {
-        %>
-        <a class="btn btn-primary btn-xl text-uppercase" href="loginPage.avocado">로그인</a>
-        <%
-            } else {
-        %>
-        <a class="btn btn-primary btn-xl text-uppercase" href="logout.avocado">로그아웃</a>
-        <%
-            }
-        %>
     </div>
 </header>
 
