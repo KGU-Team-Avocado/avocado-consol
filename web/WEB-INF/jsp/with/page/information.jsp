@@ -25,30 +25,54 @@
     <section class="section blog-wrap bg-gray">
         <div class="container">
             <div id="information"></div>
+            <div id="button"></div>
         </div>
     </section>
 </div>
 <%@include file="../main/footer.jsp"%>
 
 <script>
-    let info = $('#information');
+    let info = $('#information')
+    let button = $('#button')
+    let text = <%=information%>;
     $(document).ready(function (){
         makeInformation();
     })
     function makeInformation(){
-        let text = <%=information%>;
         let user = <%=user%>;
         info.append(text.content);
         if(user.type =="전체관리자"){
-            info.append('<button onclick="modifyInformation()">수정</button>')
+            button.append('<button onclick="modifyInformation()" type="button" class="btn btn-primary">수정</button>')
+
         }
     }
     function modifyInformation(){
-        info.html('<textarea id="modifyInformationContent"></textarea>');
+        info.html('<textarea id="modifyInformationContent">'+text.content+'</textarea>');
         CKEDITOR.replace('modifyInformationContent', {
             allowedContent: true,
             height: 500,
             'filebrowserUploadUrl': 'Uploader'
         });
+        button.html('<button onclick="saveInformation()" type="button" class="btn btn-primary">저장</button>')
     }
+
+    function saveInformation() {
+        let newText = CKEDITOR.instances.modifyInformationContent.getData();
+        let data = newText + "-/-/-" + text.id;
+        $.ajax({
+                url:"ajax.avocado",
+                type : "POST",
+                data:{
+                    req : "saveInformation",
+                    data : data
+                },
+                success : function(data){
+                    alert(data);
+                    location.reload();
+
+                }
+            }
+        )
+    }
+
 </script>

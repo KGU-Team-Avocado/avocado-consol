@@ -47,4 +47,21 @@ public class WithDAO {
             return null;
     }
 
+    public String saveInformation(String data) {
+        List<Map<String, Object>> listOfMaps = null;
+        Connection conn = Config.getInstance().sqlLogin();
+        String [] array = data.split("-/-/-");
+        try {
+            QueryRunner queryRunner = new QueryRunner();
+            queryRunner.update(conn,"UPDATE information SET content=? WHERE id=?", array[0], array[1]);
+
+//            System.out.println(listOfMaps);
+        } catch(SQLException se) {
+            se.printStackTrace();
+        } finally {
+            DbUtils.closeQuietly(conn);
+        }
+        Gson gson = new Gson();
+        return "success";
+    }
 }

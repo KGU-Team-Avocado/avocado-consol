@@ -11,7 +11,7 @@
     String type = (String)session.getAttribute("type");
 %>
 <head>
-
+    <script src="//cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

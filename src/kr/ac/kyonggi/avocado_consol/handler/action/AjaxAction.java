@@ -5,6 +5,7 @@ import com.google.gson.Gson;
 import kr.ac.kyonggi.avocado_consol.common.controller.Action;
 import kr.ac.kyonggi.avocado_consol.handler.dao.user.UserDAO;
 import kr.ac.kyonggi.avocado_consol.handler.dao.with.BbsDAO;
+import kr.ac.kyonggi.avocado_consol.handler.dao.with.WithDAO;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -37,6 +38,9 @@ public class AjaxAction implements Action {
             case "insertBbs":
                 System.out.println(data);
                 result= BbsDAO.getInstance().insertBbs(data);
+                break;
+            case "saveInformation":
+                result= WithDAO.getInstance().saveInformation(data);
                 break;
         }
 
