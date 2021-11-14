@@ -5,11 +5,12 @@ import java.sql.Date;
 public class BbsDTO {
 
     public String id;
+    public String writer_id;
     public String writer_name;
     public String title;
     public String content;
     public String view;
-    public Date date;
+    public String date;
     public String category;
     public String level;
 
@@ -21,12 +22,20 @@ public class BbsDTO {
         this.id = id;
     }
 
-    public String getWriter() {
+    public String getWriter_id() {
+        return writer_id;
+    }
+
+    public void setWriter_id(String writer_id) {
+        this.writer_id = writer_id;
+    }
+
+    public String getWriter_name() {
         return writer_name;
     }
 
-    public void setWriter(String writer) {
-        this.writer_name = writer;
+    public void setWriter_name(String writer_name) {
+        this.writer_name = writer_name;
     }
 
     public String getTitle() {
@@ -53,11 +62,11 @@ public class BbsDTO {
         this.view = view;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

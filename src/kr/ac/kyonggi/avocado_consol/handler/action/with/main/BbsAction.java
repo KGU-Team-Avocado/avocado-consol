@@ -22,6 +22,12 @@ public class BbsAction implements Action {
             request.setAttribute("getBBSList", gson.toJson(BbsDAO.getInstance().getBbs()));
             return "RequestDispatcher:jsp/with/bbs/list.jsp";
         } else if (mode.equals("view")) {
+            String id = request.getParameter("id");
+            if(id == null) {
+                return "RequestDispatcher:jsp/with/bbs/list.jsp";
+            }
+            request.setAttribute("getBBS", gson.toJson(BbsDAO.getInstance().getOneBbs(id)));
+            System.out.println(BbsDAO.getInstance().getOneBbs(id));
             return "RequestDispatcher:jsp/with/bbs/view.jsp";
         } else if (mode.equals("write")) {
             return "RequestDispatcher:jsp/with/bbs/write.jsp";

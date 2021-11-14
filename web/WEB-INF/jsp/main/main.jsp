@@ -18,6 +18,7 @@
     <div class="container">
         <div class="masthead-subheading">아보카도 콘솔에 오신 것을</div>
         <div class="masthead-heading text-uppercase">환영합니다</div>
+        <div id="loginInfo"></div>
         <%
             if (user == null) {
         %>
@@ -320,7 +321,29 @@
 <script>
     $(document).ready(function () {
         makeCards();
+        makeLoginInfo();
     })
+
+    function makeLoginInfo(){
+        let user = <%=user%>;
+        let card = $('#loginInfo');
+        let text='';
+        if(user==null){
+            text+='<a class="btn btn-primary btn-xl text-uppercase" href="loginPage.avocado">로그인</a>'
+        }
+        else{
+            if (user.type=='전체관리자'){
+                text+='<a href="">관리자페이지</a>'
+            }
+            else {
+                text+='<a href="">마이페이지</a>'
+            }
+            text+='<a class="btn btn-primary btn-xl text-uppercase" href="logout.avocado">로그아웃</a>'
+        }
+
+
+        card.append(text);
+    }
 
     function makeCards() {
         let data = <%=team%>;
