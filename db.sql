@@ -105,3 +105,12 @@ INSERT INTO information(id, content) VALUE(10, 'test10');
 INSERT INTO information(id, content) VALUE(11, 'test11');
 INSERT INTO information(id, content) VALUE(12, 'test12');
 INSERT INTO information(id, content) VALUE(13, 'test13');
+
+CREATE TABLE main_information (
+                             `id` INT(10) NOT NULL,
+                             `content` TEXT NOT NULL,
+                             PRIMARY KEY (`id`)
+);
+INSERT INTO main_information(id, content) VALUE(1, 'test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10test10');
+INSERT INTO main_information(id, content) VALUE(2, 'test11<br>test11<br>test11<br>test11<br>test11<br>test11<br>test11<br>test11<br>test11<br>test11<br>test11<br>test11<br>test11<br>test11<br>test11<br>test11<br>test11<br>test11<br>test11<br>');
+INSERT INTO main_information(id, content) VALUE(3, 'test12<br>test12<br>test12<br>test12<br>test12<br>test12<br>test12<br>test12<br>test12<br>test12<br>test12<br>test12<br>test12<br>test12<br>test12<br>test12<br>test12<br>test12<br>test12<br>test12<br>test12<br>');

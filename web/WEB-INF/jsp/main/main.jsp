@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    String team = (String)request.getAttribute("team");
+    String team = (String) request.getAttribute("team");
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,24 +35,30 @@
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
                         </span>
-                <h4 class="my-3">E-Commerce</h4>
-                <p class="text-muted">온라인 거래 플랫폼이 필요하세요?</p>
+                <a href="main_information.avocado?num=1">
+                    <h4 class="my-3">E-Commerce</h4>
+                    <p class="text-muted">온라인 거래 플랫폼이 필요하세요?</p>
+                </a>
             </div>
             <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
                         </span>
-                <h4 class="my-3">Workstation</h4>
-                <p class="text-muted">업무용 플랫폼이 필요하세요?</p>
+                <a href="main_information.avocado?num=2">
+                    <h4 class="my-3">Workstation</h4>
+                    <p class="text-muted">업무용 플랫폼이 필요하세요?</p>
+                </a>
             </div>
             <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
                         </span>
-                <h4 class="my-3">Security</h4>
-                <p class="text-muted">저희 아보카도 콘솔은 뛰어난 보안을 자랑합니다.</p>
+                <a href="main_information.avocado?num=3">
+                    <h4 class="my-3">Security</h4>
+                    <p class="text-muted">저희 아보카도 콘솔은 뛰어난 보안을 자랑합니다.</p>
+                </a>
             </div>
         </div>
     </div>
@@ -313,21 +319,19 @@
         makeLoginInfo();
     })
 
-    function makeLoginInfo(){
+    function makeLoginInfo() {
         let user = <%=user%>;
         let card = $('#loginInfo');
-        let text='';
-        if(user==null){
-            text+='<a class="btn btn-primary btn-xl text-uppercase" href="loginPage.avocado">로그인</a>'
-        }
-        else{
-            if (user.type=='전체관리자'){
-                text+='<a href="">관리자페이지</a>'
+        let text = '';
+        if (user == null) {
+            text += '<a class="btn btn-primary btn-xl text-uppercase" href="loginPage.avocado">로그인</a>'
+        } else {
+            if (user.type == '전체관리자') {
+                text += '<a href="">관리자페이지</a>'
+            } else {
+                text += '<a href="">마이페이지</a>'
             }
-            else {
-                text+='<a href="">마이페이지</a>'
-            }
-            text+='<a class="btn btn-primary btn-xl text-uppercase" href="logout.avocado">로그아웃</a>'
+            text += '<a class="btn btn-primary btn-xl text-uppercase" href="logout.avocado">로그아웃</a>'
         }
 
 
@@ -355,4 +359,14 @@
 
 
 </script>
+
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+<!-- * *                               SB Forms JS                               * *-->
+<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+
+
 </html>

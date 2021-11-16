@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import kr.ac.kyonggi.avocado_consol.common.sql.Config;
 import kr.ac.kyonggi.avocado_consol.handler.dao.user.UserDAO;
+import kr.ac.kyonggi.avocado_consol.handler.dto.InformationDTO;
 import kr.ac.kyonggi.avocado_consol.handler.dto.TeamDTO;
 import org.apache.commons.dbutils.DbUtils;
 import org.apache.commons.dbutils.QueryRunner;
@@ -40,5 +41,25 @@ public class HomeDAO {
         ArrayList<TeamDTO> selectedList = gson.fromJson(gson.toJson(listOfMaps), new TypeToken<List<TeamDTO>>(){
         }.getType());
         return selectedList;
+    }
+
+    public InformationDTO getInformation(String id) {
+        List<Map<String, Object>> listOfMaps = null;
+        Connection conn = Config.getInstance().sqlLogin();
+        try {
+            QueryRunner queryRunner = new QueryRunner();
+            listOfMaps = queryRunner.query(conn,"SELECT * FROM main_information WHERE id = ?;", new MapListHandler(), id);
+        } catch(SQLException se) {
+            se.printStackTrace();
+        } finally {
+            DbUtils.closeQuietly(conn);
+        }
+        Gson gson = new Gson();
+        ArrayList<InformationDTO> selected = gson.fromJson(gson.toJson(listOfMaps), new TypeToken<List<InformationDTO>>() {}.getType());
+        if(selected.size()>0) {
+            return selected.get(0);
+        }
+        else
+            return null;
     }
 }
