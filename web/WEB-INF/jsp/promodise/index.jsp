@@ -163,6 +163,12 @@
                                         <h4 class="subheading">팀 결성</h4>
                                     </div>
                                     <div class="timeline-body"><p class="text-muted">CS-HOME에서 활동하는 학생 4명에서 처음으로 팀을 만들었습니다.</p></div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted text-center row mb-5">
+                                <div class="timeline-image col-6"><img class="rounded-circle img-fluid"
+                                                                 src="/theme/main/assets/img/about/2.jpg" alt="..."/></div>
+                                <div class="timeline-panel col-6">
                                     <div class="timeline-heading">
                                         <h4>2021.09</h4>
                                         <h4 class="subheading">팀 확장</h4>
