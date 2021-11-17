@@ -221,8 +221,7 @@
         <div class="row">
             <div class="col-lg-12 col-sm-12 m-auto">
                 <div class="section-heading text-white">
-                    <h4 class="section-title">Full stack digital marketing solution</h4>
-                    <p>We’re full service which means we’ve got you covered on design & content right through to digital. You’ll form a lasting relationship with us.</p>
+                    <h4 class="section-title">DIFFERENCE</h4>
                 </div>
             </div>
         </div>
@@ -237,33 +236,33 @@
                 <div class="col-lg-4 col-sm-6 col-md-6">
                     <div class="service-box">
                         <div class="service-img-icon">
-                            <img src="../../../theme/promodise/images/icon/007-digital-marketing-3.png" alt="service-icon" class="img-fluid">
+                            <img src="../../../theme/promodise/images/icon/no.2-price.png" alt="service-icon" class="img-fluid">
                         </div>
                         <div class="service-inner">
-                            <h4>Video Marketing</h4>
-                            <p>Reach a huge area of users and get a publicty of your product and service ,<span>video marketing</span> solution.</p>
+                            <h4>Low Price</h4>
+                            <p>Code recycle 방식을 채택하여 저렴한 비용으로 웹서비스를 제공합니다.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 col-md-6">
                     <div class="service-box ">
                         <div class="service-img-icon">
-                            <img src="../../../theme/promodise/images/icon/008-digital-marketing-2.png" alt="service-icon" class="img-fluid">
+                            <img src="../../../theme/promodise/images/icon/no.3-custom.png" alt="service-icon" class="img-fluid">
                         </div>
                         <div class="service-inner">
-                            <h4>Email Marketing</h4>
-                            <p>Email Marketing is a great solution to reach a <span>high range of customers</span> eagrerly waiting to get a service.</p>
+                            <h4>Customizing</h4>
+                            <p>나만의 웹을 제작할 수 있습니다.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 col-md-6">
                     <div class="service-box">
                         <div class="service-img-icon">
-                            <img src="../../../theme/promodise/images/icon/003-task.png" alt="service-icon" class="img-fluid">
+                            <img src="../../../theme/promodise/images/icon/no.1-maintenance.png" alt="service-icon" class="img-fluid">
                         </div>
                         <div class="service-inner">
-                            <h4>SEO optimization</h4>
-                            <p>we provide wide range of<span> seo service</span> to make your site at top to reach your target customers provided.</p>
+                            <h4>Easy Maintenance</h4>
+                            <p>한눈에 알아보기 쉬운 코드 블록을 통해 쉽게 수정할 수 있습니다.</p>
                         </div>
                     </div>
                 </div>
@@ -271,33 +270,33 @@
                 <div class="col-lg-4 col-sm-6 col-md-6">
                     <div class="service-box">
                         <div class="service-img-icon">
-                            <img src="../../../theme/promodise/images/icon/010-digital-marketing.png" alt="service-icon" class="img-fluid">
+                            <img src="../../../theme/promodise/images/icon/no.5-animation.png" alt="service-icon" class="img-fluid">
                         </div>
                         <div class="service-inner">
-                            <h4>Custom Website</h4>
-                            <p>We  provide <span>custom website</span> for any small and large company web based service in large compact package.</p>
+                            <h4>Powerful Animation</h4>
+                            <p>웹사이트에 살아 생동하는 듯 강력한 애니메이션을 구현할 수 있습니다.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 col-md-6">
                     <div class="service-box">
                         <div class="service-img-icon">
-                            <img src="../../../theme/promodise/images/icon/006-analytics.png" alt="service-icon" class="img-fluid">
+                            <img src="../../../theme/promodise/images/icon/no.4-community.png" alt="service-icon" class="img-fluid">
                         </div>
                         <div class="service-inner">
-                            <h4>Content Growth</h4>
-                            <p>Content is king,Having a blog site and want to <span>build content</span> make a platform of earning too we assist you.</p>
+                            <h4>Community</h4>
+                            <p>자유로운 정보 공유로 비즈니스에 도움을 줄 수 있습니다.  </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 col-md-6">
                     <div class="service-box">
                         <div class="service-img-icon">
-                            <img src="../../../theme/promodise/images/icon/004-hiring.png" alt="service-icon" class="img-fluid">
+                            <img src="../../../theme/promodise/images/icon/no.6-trency.png" alt="service-icon" class="img-fluid">
                         </div>
                         <div class="service-inner">
-                            <h4>Link Building </h4>
-                            <p>Want to grow your <span>potential visitor</span> your site to make it more effective and succesful business .</p>
+                            <h4>Trendy </h4>
+                            <p>서포터즈 모집 활동으로 시대의 흐름을 새롭게 만들어갈 수 있습니다. </p>
                         </div>
                     </div>
                 </div>

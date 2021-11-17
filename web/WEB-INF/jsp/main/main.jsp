@@ -5,6 +5,7 @@
   Time: 오후 10:22
   To change this template use File | Settings | File Templates.
 --%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     String team = (String) request.getAttribute("team");
@@ -356,7 +357,7 @@
         }
         card.append(text);
     }
-
+//여기까지는 자바인데 JSP가 자바와 html을??? JSP가 서버와의 소통?
 
 </script>
 

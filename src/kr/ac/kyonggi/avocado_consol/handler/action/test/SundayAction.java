@@ -10,9 +10,10 @@ import javax.servlet.http.HttpServletResponse;
 public class SundayAction implements Action {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
         Gson gson = new Gson();
         request.setAttribute("test_data", gson.toJson(TestDAO.getInstance().getTest()));
         return "RequestDispatcher:jsp/test/sunday.jsp";
     }
-}
 
+}

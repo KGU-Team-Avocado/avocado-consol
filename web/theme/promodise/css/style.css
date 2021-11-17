@@ -38,7 +38,7 @@ body {
 
 p {
   line-height: 28px;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 html {
@@ -839,17 +839,17 @@ HISTORY MISSION
   height: 100px;
   text-align: center;
   background: #fff;
-  padding-top: 20px;
+  padding-top: 30px;
   margin: 0 auto;
   border-radius: 100%;
   margin-bottom: 20px;
-  background: #635CDB;
+  background: #fff;
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #fff;
 }
 
 .service-box {
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   background: #fff;
   text-align: center;
   padding: 45px 25px 30px 25px;

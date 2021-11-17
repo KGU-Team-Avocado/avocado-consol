@@ -37,6 +37,8 @@ public class Controller extends HttpServlet{
         String forward = null;
 
         ServletContext context = getServletContext();
+
+        //프로퍼티에서 뒤져서 넘어온 .avocado를 찾아서 가져온다
         String fullPath = context.getRealPath("/WEB-INF/class.properties");
         Properties prop = new Properties();
         FileInputStream fis = new FileInputStream(fullPath);
@@ -49,7 +51,7 @@ public class Controller extends HttpServlet{
 
         try{
             Class<?> url = Class.forName(classPath);
-
+            //이 URL이 액션 타입이다
             action = (Action) url.newInstance();
             try {
                 forward = action.execute(request, response); //Action클래스를 실행한 후, 결과값을 forward 변수에 담습니다.
@@ -71,7 +73,8 @@ public class Controller extends HttpServlet{
  * Action클래스 종료 이후, 반환받았던 변수인 forward를 분석하여 톰캣으로 넘겨줍니다.
  * */
 
-
+        //return으로 받은 URL(경로?)을 처리
+        //톰켓으로 부터 컨트롤러왔는데 처리하고 다시 톰켓한테 돌려준다
         if(forward != null){
 
             if(forward.contains("RequestDispatcher:"))

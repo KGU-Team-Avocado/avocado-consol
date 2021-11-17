@@ -15,7 +15,7 @@
     <title>Album example · Bootstrap v5.1</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
-
+    <!--이게 J쿼리 프레임워크 사용설정이라네-->
     <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 

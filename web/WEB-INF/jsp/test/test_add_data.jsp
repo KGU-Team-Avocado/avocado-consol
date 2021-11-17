@@ -52,15 +52,22 @@
 </body>
 <script>
     function addData(){
+        <!--title로 읽어온 데이터가 넘어옴-->
         let title = $('#title').val();
         let description = $('#description').val();
         let imageUrl = $('#image_url').val();
+
+        //이 데이터를 서버로 보내주겠다 -> 이게 자바스크립트까지 데이터를 넘기기
         let data = title+'-/-/-'+description+'-/-/-'+imageUrl
         // alert(title+description+imageUrl);
+
+
         $.ajax({
+            //어디로 보낼거냐 -> 이 클래스로 넘어간다
             url:"test_ajax.avocado",
             type:"post",
             data:{
+                //저 어디에 해당하는 곳으로 이 데이터를 보낸다
                 req: "addData",
                 data: data
             },
