@@ -190,7 +190,7 @@
                     <div class="pricing-block ">
                         <div class="price-header">
                             <i class="icofont-diamond"></i>
-                            <h4 class="price"><small>$</small>26</h4>
+                            <h4 class="price">Free</h4>
                             <h5>Monthly pack</h5>
                         </div>
                         <div class="line"></div>
