@@ -25,13 +25,7 @@
 <!--  ABOUT AREA START  -->
     <section id="intro" class="section-padding">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-sm-12 col-md-12">
-                    <div class="section-heading">
-                        <p class="lead">We are creative digital marketing agency with expertise to grow any business that need proper guidance and a committed service.</p>
-                    </div>
-                </div>
-            </div>
+
             <div class="row">
                 <div class="col-lg-5  d-none d-lg-block col-sm-12">
                     <div class="intro-img">
@@ -43,36 +37,36 @@
                         <div class="col-lg-6 col-sm-6 col-md-6">
                             <div class="intro-box">
                                 <span>01.</span>
-                                <h4>Management</h4>
-                                <p>we founded September with the goal of creating meaningful digital experiences that connect with people.</p>
+                                <h4>기업 자체 PR</h4>
+                                <p>소상공인의 업종에 따라 관리하기 편한 웹페이지를 제공하여 홍보수단으로 활용, 기회창출을 이끌어 냄.</p>
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-6 col-md-6">
                             <div class="intro-box">
                                 <span>02.</span>
-                                <h4>Strategy</h4>
-                                <p>We’re full service which means we’ve got you covered on design & content right through to digital. </p>
+                                <h4>프렌차이즈 견제</h4>
+                                <p>기업독점을 막고 플랫폼을 거치지 않고 사용자들과의 직접 연결가능. 수수료가 줄어들어 저렴한 가격에 상품제공가능 </p>
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-6 col-md-6">
                             <div class="intro-box">
                                 <span>03.</span>
-                                <h4>Experience</h4>
-                                <p>You’ll form a lasting relationship with us, collaboration is central to we do.Digital experiences connect people.</p>
+                                <h4>비용절감</h4>
+                                <p>코드 재사용으로 인해 비용과 시간을 절약을 할 수 있어 저렴한 가격으로 웹서비스 이용가능.</p>
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-6 col-md-6">
                             <div class="intro-box">
                                 <span>04.</span>
-                                <h4>Build</h4>
-                                <p>Technology and design are the core of success for real estate related businesses. Leverage our years.</p>
+                                <h4>기대효과</h4>
+                                <p>자체홈페이지활용으로 인해 정보가 부족한 일반인들에게도 공정한 거래 제공가능.</p>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                       <div class="col-lg-12">
                            <div class="intro-cta">
-                               <p class="lead ">Still have any question on mind ? <a href="#contact" class="smoth-scroll">Contact us</a></p>
+                               <p class="lead ">문의사항이 있으신가요 ? <a href="#contact" class="smoth-scroll">Contact us</a></p>
                            </div>
                         </div>
                     </div>
