@@ -424,7 +424,17 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-4 col-sm-6 col-md-4">
+                <div class="col-lg-3 col-sm-6 col-md-3">
+                    <div class="blog-block ">
+                        <img src="../../../theme/promodise/images/with.png" alt="" class="img-fluid">
+                        <div class="blog-text">
+                            <a href="blog-single.jsp" class="h5 my-2 d-inline-block">
+                                위드경영 컨설팅
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-md-3">
                     <div class="blog-block ">
                         <img src="../../../theme/promodise/images/kguCompageImg.png" alt="" class="img-fluid">
                         <div class="blog-text">
@@ -434,7 +444,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 col-md-4">
+                <div class="col-lg-3 col-sm-6 col-md-3">
                     <div class="blog-block ">
                         <img src="../../../theme/promodise/images/kguAipageImg.png" alt="" class="img-fluid">
                         <div class="blog-text">
@@ -444,7 +454,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 col-md-4">
+                <div class="col-lg-3 col-sm-6 col-md-3">
                     <div class="blog-block ">
                         <img src="../../../theme/promodise/images/kguSwaigpageImage.png" alt="" class="img-fluid">
                         <div class="blog-text">
