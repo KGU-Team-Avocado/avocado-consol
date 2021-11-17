@@ -19,6 +19,6 @@ public class MainAction implements Action {
         Gson gson = new Gson();
         request.setAttribute("team", gson.toJson(HomeDAO.getInstance().getTeam()));
 
-        return "RequestDispatcher:jsp/main/main.jsp";
+        return "RequestDispatcher:jsp/promodise/index.jsp";
     }
 }

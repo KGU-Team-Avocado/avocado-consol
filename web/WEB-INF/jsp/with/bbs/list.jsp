@@ -27,22 +27,22 @@
     <section class="section blog-wrap bg-gray">
         <div class="container">
             <div id="tableSpace"></div>
-<%--            <table class="table" id="table1" data-toggle="table"--%>
-<%--                   data-pagination="true" data-toolbar="#toolbar"--%>
-<%--                   data-search="true" data-side-pagination="true" data-click-to-select="true" data-height="600"--%>
-<%--                   data-page-size="10"--%>
-<%--                   data-page-list="[10,20,30]">--%>
-<%--                <thead>--%>
-<%--                <tr>--%>
-<%--                    <th data-field="id" data-sortable="false">번호</th>--%>
-<%--                    <th data-field="title" data-sortable="false">제목</th>--%>
-<%--                    <th data-field="writer_name" data-sortable="false">글쓴이</th>--%>
-<%--                    <th data-field="last_modified" data-sortable="false">작성일</th>--%>
-<%--                    <th data-field="views" data-sortable="false">조회수</th>--%>
-<%--                    &lt;%&ndash;            <th data-field="likes" data-sortable="true">추천</th>&ndash;%&gt;--%>
-<%--                </tr>--%>
-<%--                </thead>--%>
-<%--            </table>--%>
+            <table class="table" id="table1" data-toggle="table"
+                   data-pagination="true" data-toolbar="#toolbar"
+                   data-search="true" data-side-pagination="true" data-click-to-select="true" data-height="600"
+                   data-page-size="10"
+                   data-page-list="[10,20,30]">
+                <thead>
+                <tr>
+                    <th data-field="id" data-sortable="false">번호</th>
+                    <th data-field="title" data-sortable="false">제목</th>
+                    <th data-field="writer_name" data-sortable="false">글쓴이</th>
+                    <th data-field="last_modified" data-sortable="false">작성일</th>
+                    <th data-field="views" data-sortable="false">조회수</th>
+                    <%--            <th data-field="likes" data-sortable="true">추천</th>--%>
+                </tr>
+                </thead>
+            </table>
         </div>
 
         <a class="btn btn-secondary" href="bbs.avocado?mode=write">글 작성하기</a>
@@ -54,7 +54,7 @@
 
 <script>
     $(document).ready(function (){
-        tableData();
+        makeList();
     })
     function formatDate(date) {  //주어진 날짜를 yyyy-mm-dd 형식으로 반환해주는 함수
         var d = new Date(date),
@@ -67,46 +67,50 @@
 
         return [year, month, day].join('-');
     }
+    <%--function tableData(){--%>
+    <%--    var bbsList = <%=getBBSList%>;--%>
+    <%--    var tableSpace = $("#tableSpace");--%>
+    <%--    var tableData = '';--%>
+    <%--    for(var i=0;i<bbsList.length;i++){--%>
+    <%--        var bbs=bbsList[i];--%>
+    <%--        var url = 'bbs.avocado?mode=view'+'&&id='+bbs.id;--%>
+    <%--        tableData += '<div><a href="'+url+'">'+bbs.id+'</a>'--%>
+    <%--        tableData += '<a href="'+url+'">'+bbs.title+'</a>'--%>
+    <%--        tableData += '<a href="'+url+'">'+bbs.writer_name+'</a>'--%>
+    <%--        tableData += '<a href="'+url+'">'+formatDate(bbs.date)+'</a>'--%>
+    <%--        tableData += '<a href="'+url+'">'+bbs.view+'</a></div>'--%>
+    <%--    }--%>
+    <%--    tableSpace.html(tableData);--%>
+    <%--}--%>
+
+    function makeList(){
+        $('#table1').bootstrapTable('load',tableData());
+        $('#table1').bootstrapTable('refresh');
+    }
+
+
+
     function tableData(){
         var bbsList = <%=getBBSList%>;
-        var tableSpace = $("#tableSpace");
-        var tableData = '';
-        for(var i=0;i<bbsList.length;i++){
-            var bbs=bbsList[i];
-            var url = 'bbs.avocado?mode=view'+'&&id='+bbs.id;
-            tableData += '<div><a href="'+url+'">'+bbs.id+'</a>'
-            tableData += '<a href="'+url+'">'+bbs.title+'</a>'
-            tableData += '<a href="'+url+'">'+bbs.writer_name+'</a>'
-            tableData += '<a href="'+url+'">'+formatDate(bbs.date)+'</a>'
-            tableData += '<a href="'+url+'">'+bbs.view+'</a></div>'
+        var rows = [];
+        if(bbsList!=null){
+            for(var i=0;i<bbsList.length;i++){
+                var bbs=bbsList[i];
+                var url = 'bbs.avocado?mode=view'+'&&id='+bbs.id;
+                rows.push({
+                    id: '<a href="'+url+'">'+bbs.id+'</a>',
+                    title: '<a href="'+url+'">'+bbs.title+'</a>',
+                    writer_name: '<a href="'+url+'">'+bbs.writer_name+'</a>',
+                    last_modified: '<a href="'+url+'">'+formatDate(bbs.date)+'</a>',
+                    views: '<a href="'+url+'">'+bbs.view+'</a>',
+                });
+            }
         }
-        tableSpace.html(tableData);
+        return rows;
     }
-    <%--function makeList(){--%>
-    <%--    $('#table1').bootstrapTable('load',tableData());--%>
-    <%--    $('#table1').bootstrapTable('refresh');--%>
-    <%--}--%>
-
-    <%--function tableData(){--%>
-    <%--    $('#table1').DataTable();--%>
-    <%--    var bbsList = <%=getBBSList%>;--%>
-    <%--    var rows = [];--%>
-    <%--    if(bbsList!=null){--%>
-    <%--        for(var i=0;i<bbsList.length;i++){--%>
-    <%--            var bbs=bbsList[i];--%>
-    <%--            var url = 'bbs.avocado?mode=view'+'&&id='+bbs.id;--%>
-    <%--            rows.push({--%>
-    <%--                id: '<a href="'+url+'">'+bbs.id+'</a>',--%>
-    <%--                title: '<a href="'+url+'">'+bbs.title+'</a>',--%>
-    <%--                writer_name: '<a href="'+url+'">'+bbs.writer_name+'</a>',--%>
-    <%--                last_modified: '<a href="'+url+'">'+formatDate(bbs.date)+'</a>',--%>
-    <%--                views: '<a href="'+url+'">'+bbs.view+'</a>',--%>
-    <%--            });--%>
-    <%--        }--%>
-    <%--    }--%>
-    <%--    return rows;--%>
-    <%--}--%>
-
-
 
 </script>
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-table@1.19.0/dist/bootstrap-table.min.js"></script>

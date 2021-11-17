@@ -7,6 +7,6 @@ import javax.servlet.http.HttpServletResponse;
 public class WithHomeAction implements Action {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        return "RequestDispatcher:jsp/with/main/main.jsp";
+        return "RequestDispatcher:jsp/promodise/index.jsp";
     }
 }
