@@ -155,7 +155,7 @@
                 <div class="about-content">
                     <h5 class="subtitle">About us</h5>
                     <div class="text-center">
-                        <h4 class="section-title">About</h4>
+                        <h4 class="section-title">About Us</h4>
                         <p>저희 아보카도가 걸어온 길입니다.</p>
                     </div>
 
