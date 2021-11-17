@@ -145,34 +145,30 @@
 <%--        </ul>--%>
 <%--    </div>--%>
 <%--</section>--%>
+
+
 <!--  SERVICE AREA START  -->
 <section id="about" class="bg-light">
-    <div class="about-bg-img d-none d-lg-block d-md-block"></div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-7 col-sm-12 col-md-8">
+            <div class="col-12">
                 <div class="about-content">
                     <h5 class="subtitle">About us</h5>
                     <div class="text-center">
                         <h2 class="section-heading text-uppercase">About</h2>
                         <h3 class="section-subheading text-muted">저희 아보카도 콘솔이 걸어온 길 입니다.</h3>
                     </div>
-                    <p>We craft beautiful website layout from scratch.You need not to worry about site design and other technial issue.We provide these attractive service as a bonus.Let's have atalk together for your next project.</p>
 
                         <ul class="timeline">
-                            <li>
-                                <div class="timeline-image"><img class="rounded-circle img-fluid"
+                            <li class="timeline-inverted text-center row mb-5">
+                                <div class="timeline-image col-6"><img class="rounded-circle img-fluid"
                                                                  src="/theme/main/assets/img/about/1.jpg" alt="..."/></div>
-                                <div class="timeline-panel">
+                                <div class="timeline-panel col-6">
                                     <div class="timeline-heading">
                                         <h4>2021.08</h4>
                                         <h4 class="subheading">팀 결성</h4>
                                     </div>
                                     <div class="timeline-body"><p class="text-muted">CS-HOME에서 활동하는 학생 4명에서 처음으로 팀을 만들었습니다.</p></div>
-                                </div>
-                            </li>
-                            <li class="timeline-inverted">
-                                <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4>2021.09</h4>
                                         <h4 class="subheading">팀 확장</h4>
@@ -180,10 +176,10 @@
                                     <div class="timeline-body"><p class="text-muted">팀원 10명을 충원하여 아보카도 팀을 구성했습니다.</p></div>
                                 </div>
                             </li>
-                            <li>
-                                <div class="timeline-image"><img class="rounded-circle img-fluid"
+                            <li class="timeline-inverted text-center row mb-5">
+                                <div class="timeline-image col-6"><img class="rounded-circle img-fluid"
                                                                  src="/theme/main/assets/img/about/3.jpg" alt="..."/></div>
-                                <div class="timeline-panel">
+                                <div class="timeline-panel col-6">
                                     <div class="timeline-heading">
                                         <h4>2021.10</h4>
                                         <h4 class="subheading">웹 기술 학습</h4>
@@ -191,10 +187,10 @@
                                     <div class="timeline-body"><p class="text-muted">웹 서버를 구성하기 위해 여러가지 학습을 경험했습니다.</p></div>
                                 </div>
                             </li>
-                            <li class="timeline-inverted">
-                                <div class="timeline-image"><img class="rounded-circle img-fluid"
+                            <li class="timeline-inverted text-center row mb-5">
+                                <div class="timeline-image col-6"><img class="rounded-circle img-fluid"
                                                                  src="/theme/main/assets/img/about/4.jpg" alt="..."/></div>
-                                <div class="timeline-panel">
+                                <div class="timeline-panel col-6">
                                     <div class="timeline-heading">
                                         <h4>2021.10</h4>
                                         <h4 class="subheading">프로젝트 구현</h4>
@@ -202,12 +198,10 @@
                                     <div class="timeline-body"><p class="text-muted">한 달여간 학습했던 기술을 가지고 실제로 프로젝트를 구현했습니다.</p></div>
                                 </div>
                             </li>
-                            <li class="timeline-inverted">
+                            <li class="timeline-inverted text-center">
                                 <div class="timeline-image">
                                     <h4>
-                                        저희와<br>
-                                        함께<br>
-                                        하세요!
+                                        저희와 함께 하세요!
                                     </h4>
                                 </div>
                             </li>
@@ -218,6 +212,8 @@
     </div>
 </section>
 <!--  SERVICE AREA END  -->
+
+
 
 <!--  SERVICE PARTNER START  -->
 <section id="service-head" class=" bg-feature">
