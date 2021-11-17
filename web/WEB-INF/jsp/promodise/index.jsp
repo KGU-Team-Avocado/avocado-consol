@@ -81,44 +81,139 @@
         </div>
     </section>
     <!--  ABOUT AREA END  -->
+<%--<!-- About-->--%>
+<%--<section class="page-section" id="about2" style="display: none;">--%>
+<%--    <div class="container">--%>
+<%--        <div class="text-center">--%>
+<%--            <h2 class="section-heading text-uppercase">About</h2>--%>
+<%--            <h3 class="section-subheading text-muted">저희 아보카도 콘솔이 걸어온 길 입니다.</h3>--%>
+<%--        </div>--%>
+<%--        <ul class="timeline">--%>
+<%--            <li>--%>
+<%--                <div class="timeline-image"><img class="rounded-circle img-fluid"--%>
+<%--                                                 src="/theme/main/assets/img/about/1.jpg" alt="..."/></div>--%>
+<%--                <div class="timeline-panel">--%>
+<%--                    <div class="timeline-heading">--%>
+<%--                        <h4>2021.08</h4>--%>
+<%--                        <h4 class="subheading">팀 결성</h4>--%>
+<%--                    </div>--%>
+<%--                    <div class="timeline-body"><p class="text-muted">CS-HOME에서 활동하는 학생 4명에서 처음으로 팀을 만들었습니다.</p></div>--%>
+<%--                </div>--%>
+<%--            </li>--%>
+<%--            <li class="timeline-inverted">--%>
+<%--                <div class="timeline-image"><img class="rounded-circle img-fluid"--%>
+<%--                                                 src="/theme/main/assets/img/about/2.jpg" alt="..."/></div>--%>
+<%--                <div class="timeline-panel">--%>
+<%--                    <div class="timeline-heading">--%>
+<%--                        <h4>2021.09</h4>--%>
+<%--                        <h4 class="subheading">팀 확장</h4>--%>
+<%--                    </div>--%>
+<%--                    <div class="timeline-body"><p class="text-muted">팀원 10명을 충원하여 아보카도 팀을 구성했습니다.</p></div>--%>
+<%--                </div>--%>
+<%--            </li>--%>
+<%--            <li>--%>
+<%--                <div class="timeline-image"><img class="rounded-circle img-fluid"--%>
+<%--                                                 src="/theme/main/assets/img/about/3.jpg" alt="..."/></div>--%>
+<%--                <div class="timeline-panel">--%>
+<%--                    <div class="timeline-heading">--%>
+<%--                        <h4>2021.10</h4>--%>
+<%--                        <h4 class="subheading">웹 기술 학습</h4>--%>
+<%--                    </div>--%>
+<%--                    <div class="timeline-body"><p class="text-muted">웹 서버를 구성하기 위해 여러가지 학습을 경험했습니다.</p></div>--%>
+<%--                </div>--%>
+<%--            </li>--%>
+<%--            <li class="timeline-inverted">--%>
+<%--                <div class="timeline-image"><img class="rounded-circle img-fluid"--%>
+<%--                                                 src="/theme/main/assets/img/about/4.jpg" alt="..."/></div>--%>
+<%--                <div class="timeline-panel">--%>
+<%--                    <div class="timeline-heading">--%>
+<%--                        <h4>2021.10</h4>--%>
+<%--                        <h4 class="subheading">프로젝트 구현</h4>--%>
+<%--                    </div>--%>
+<%--                    <div class="timeline-body"><p class="text-muted">한 달여간 학습했던 기술을 가지고 실제로 프로젝트를 구현했습니다.</p></div>--%>
+<%--                </div>--%>
+<%--            </li>--%>
+<%--            <li class="timeline-inverted">--%>
+<%--                <div class="timeline-image">--%>
+<%--                    <h4>--%>
+<%--                        저희와<br>--%>
+<%--                        함께<br>--%>
+<%--                        하세요!--%>
+<%--                    </h4>--%>
+<%--                </div>--%>
+<%--            </li>--%>
+<%--        </ul>--%>
+<%--    </div>--%>
+<%--</section>--%>
+
 
 <!--  SERVICE AREA START  -->
 <section id="about" class="bg-light">
-    <div class="about-bg-img d-none d-lg-block d-md-block"></div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-7 col-sm-12 col-md-8">
+            <div class="col-12">
                 <div class="about-content">
                     <h5 class="subtitle">About us</h5>
-                    <h3>We are making beautiful <br>design layout for your business</h3>
-                    <p>We craft beautiful website layout from scratch.You need not to worry about site design and other technial issue.We provide these attractive service as a bonus.Let's have atalk together for your next project.</p>
+                    <div class="text-center">
+                        <h2 class="section-heading text-uppercase">About</h2>
+                        <h3 class="section-subheading text-muted">저희 아보카도 콘솔이 걸어온 길 입니다.</h3>
+                    </div>
 
-                    <ul class="about-list">
-                        <li><i class="icofont icofont-check-circled"></i> Responsive site</li>
-
-                        <li>
-                            <i class="icofont icofont-check-circled"> </i> Latest bootstrap 4
-                        </li>
-
-                        <li>
-                            <i class="icofont icofont-check-circled"> </i> Modern and clean design
-                        </li>
-                        <li>
-                            <i class="icofont icofont-check-circled"> </i> Working contact form
-                        </li>
-                        <li>
-                            <i class="icofont icofont-check-circled"> </i> Premium services and support
-                        </li>
-                        <li>
-                            <i class="icofont icofont-check-circled"></i> Cross browser compatiabilty
-                        </li>
-                    </ul>
+                        <ul class="timeline">
+                            <li class="timeline-inverted text-center row mb-5">
+                                <div class="timeline-image col-6"><img class="rounded-circle img-fluid"
+                                                                 src="/theme/main/assets/img/about/1.jpg" alt="..."/></div>
+                                <div class="timeline-panel col-6">
+                                    <div class="timeline-heading">
+                                        <h4>2021.08</h4>
+                                        <h4 class="subheading">팀 결성</h4>
+                                    </div>
+                                    <div class="timeline-body"><p class="text-muted">CS-HOME에서 활동하는 학생 4명에서 처음으로 팀을 만들었습니다.</p></div>
+                                    <div class="timeline-heading">
+                                        <h4>2021.09</h4>
+                                        <h4 class="subheading">팀 확장</h4>
+                                    </div>
+                                    <div class="timeline-body"><p class="text-muted">팀원 10명을 충원하여 아보카도 팀을 구성했습니다.</p></div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted text-center row mb-5">
+                                <div class="timeline-image col-6"><img class="rounded-circle img-fluid"
+                                                                 src="/theme/main/assets/img/about/3.jpg" alt="..."/></div>
+                                <div class="timeline-panel col-6">
+                                    <div class="timeline-heading">
+                                        <h4>2021.10</h4>
+                                        <h4 class="subheading">웹 기술 학습</h4>
+                                    </div>
+                                    <div class="timeline-body"><p class="text-muted">웹 서버를 구성하기 위해 여러가지 학습을 경험했습니다.</p></div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted text-center row mb-5">
+                                <div class="timeline-image col-6"><img class="rounded-circle img-fluid"
+                                                                 src="/theme/main/assets/img/about/4.jpg" alt="..."/></div>
+                                <div class="timeline-panel col-6">
+                                    <div class="timeline-heading">
+                                        <h4>2021.10</h4>
+                                        <h4 class="subheading">프로젝트 구현</h4>
+                                    </div>
+                                    <div class="timeline-body"><p class="text-muted">한 달여간 학습했던 기술을 가지고 실제로 프로젝트를 구현했습니다.</p></div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted text-center">
+                                <div class="timeline-image">
+                                    <h4>
+                                        저희와 함께 하세요!
+                                    </h4>
+                                </div>
+                            </li>
+                        </ul>
                 </div>
             </div>
         </div>
     </div>
 </section>
 <!--  SERVICE AREA END  -->
+
+
 
 <!--  SERVICE PARTNER START  -->
 <section id="service-head" class=" bg-feature">
@@ -211,89 +306,89 @@
     </section>
     <!--  SERVICE AREA END  -->
 <!-- PRICE AREA START  -->
-    <section id="pricing" class="section-padding bg-main">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-sm-12 m-auto">
-                    <div class="section-heading">
-                        <h4 class="section-title">Affordable pricing plan for you</h4>
-                        <p>We have different type of pricing table to choose with your need. Check which one is most suitble for you and your business purpose. </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="pricing-block ">
-                        <div class="price-header">
-                            <i class="icofont-diamond"></i>
-
-                            <h4 class="price"><small>$</small>26</h4>
-                            <h5>Monthly pack</h5>
-                        </div>
-                        <div class="line"></div>
-                        <ul>
-                            <li>5 GB Bandwidth</li>
-                            <li>Highest Speed</li>
-                            <li>1 GB Storage</li>
-                            <li>Unlimited Website</li>
-                            <li>Unlimited Users</li>
-                            <li>Data Security and Backups</li>
-                            <li>24x7 Great Support</li>
-                            <li>Monthly Reports and Analytics</li>
-                        </ul>
-
-                        <a href="#" class="btn btn-hero btn-circled">select plan</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="pricing-block ">
-                        <div class="price-header">
-                            <i class="icofont-rocket-alt-1"></i>
-
-                            <h4 class="price"><small>$</small>46</h4>
-                            <h5>Monthly pack</h5>
-                        </div>
-                        <div class="line"></div>
-                        <ul>
-                            <li>5 GB Bandwidth</li>
-                            <li>Highest Speed</li>
-                            <li>1 GB Storage</li>
-                            <li>Unlimited Website</li>
-                            <li>Unlimited Users</li>
-                            <li>Data Security and Backups</li>
-                            <li>24x7 Great Support</li>
-                            <li>Monthly Reports and Analytics</li>
-                        </ul>
-
-                        <a href="#" class="btn btn-hero btn-circled">select plan</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="pricing-block">
-                        <div class="price-header">
-                            <i class="icofont-light-bulb"></i>
-
-                            <h4 class="price"><small>$</small>76</h4>
-                            <h5>Monthly pack</h5>
-                        </div>
-                        <div class="line"></div>
-                        <ul>
-                            <li>5 GB Bandwidth</li>
-                            <li>Highest Speed</li>
-                            <li>1 GB Storage</li>
-                            <li>Unlimited Website</li>
-                            <li>Unlimited Users</li>
-                            <li>Data Security and Backups</li>
-                            <li>24x7 Great Support</li>
-                            <li>Monthly Reports and Analytics</li>
-                        </ul>
-
-                        <a href="#" class="btn btn-hero btn-circled">select plan</a>
-                    </div>
+<section id="pricing" class="section-padding bg-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 m-auto">
+                <div class="section-heading">
+                    <h4 class="section-title">Affordable pricing plan for you</h4>
+                    <p>We have different type of pricing table to choose with your need. Check which one is most suitble for you and your business purpose. </p>
                 </div>
             </div>
         </div>
-    </section>
+        <div class="row">
+            <div class="col-lg-4 col-sm-6">
+                <div class="pricing-block ">
+                    <div class="price-header">
+                        <i class="icofont-diamond"></i>
+
+                        <h4 class="price">free</h4>
+                        <h5>Monthly pack</h5>
+                    </div>
+                    <div class="line"></div>
+                    <ul>
+                        <li>3 GB Bandwidth</li>
+                        <li>Highest Speed</li>
+                        <li>3 GB Storage</li>
+                        <li>limited Website</li>
+                        <li>limited Users</li>
+                        <li>Data Security and Backups</li>
+                        <li>24x7 Great Support</li>
+                        <li>Monthly Reports and Analytics</li>
+                    </ul>
+
+                    <a href="#" class="btn btn-hero btn-circled">select plan</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="pricing-block ">
+                    <div class="price-header">
+                        <i class="icofont-rocket-alt-1"></i>
+
+                        <h4 class="price">30,000<small>원</small></h4>
+                        <h5>Monthly pack</h5>
+                    </div>
+                    <div class="line"></div>
+                    <ul>
+                        <li>5 GB Bandwidth</li>
+                        <li>Highest Speed</li>
+                        <li>10 GB Storage</li>
+                        <li>Unlimited Website</li>
+                        <li>Unlimited Users</li>
+                        <li>Data Security and Backups</li>
+                        <li>24x7 Great Support</li>
+                        <li>Monthly Reports and Analytics</li>
+                    </ul>
+
+                    <a href="#" class="btn btn-hero btn-circled">select plan</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="pricing-block">
+                    <div class="price-header">
+                        <i class="icofont-light-bulb"></i>
+
+                        <h4 class="price">100,000<small>원</small></h4>
+                        <h5>Monthly pack</h5>
+                    </div>
+                    <div class="line"></div>
+                    <ul>
+                        <li>5 GB Bandwidth</li>
+                        <li>Highest Speed</li>
+                        <li>15 GB Storage</li>
+                        <li>Unlimited Website</li>
+                        <li>Unlimited Users</li>
+                        <li>Data Security and Backups</li>
+                        <li>24x7 Great Support</li>
+                        <li>Monthly Reports and Analytics</li>
+                    </ul>
+
+                    <a href="#" class="btn btn-hero btn-circled">select plan</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- PRICE AREA END  -->
 <!--  TESTIMONIAL AREA START  -->
     <section id="testimonial" class="section-padding ">
