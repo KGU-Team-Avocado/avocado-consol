@@ -30,7 +30,8 @@
 <!-- ABOUT AREA START -->
 <section id="intro" class="section-padding">
     <div class="container">
-        <div class="row">
+        <div class="h2 py-5">디자인 선택</div>
+        <div class="row py-5">
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
@@ -59,22 +60,48 @@
                 </li>
             </ul>
         </div>
-        <div class="row">
-            <!-- Tab panes -->
-            <div class="tab-content">
-                <div class="tab-pane active" id="header" role="tabpanel" aria-labelledby="header-tab">1</div>
-                <div class="tab-pane" id="hero" role="tabpanel" aria-labelledby="hero-tab">2</div>
-                <div class="tab-pane" id="feature" role="tabpanel" aria-labelledby="feature-tab">3</div>
-                <div class="tab-pane" id="slidebar" role="tabpanel" aria-labelledby="slidebar-tab">4</div>
-                <div class="tab-pane" id="footer" role="tabpanel" aria-labelledby="footer-tab">5</div>
-                <div class="tab-pane" id="dropdown" role="tabpanel" aria-labelledby="dropdown-tab">6</div>
-                <div class="tab-pane" id="list-group" role="tabpanel" aria-labelledby="list-group-tab">7</div>
-                <div class="tab-pane" id="modal" role="tabpanel" aria-labelledby="modal-tab">8</div>
+        <div>위의 탭 버튼으로 전환해주세요.</div>
+        <hr>
+        <div class="row py-5">
+            <div class="card">
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="header" role="tabpanel" aria-labelledby="header-tab">
+                        <img src="/theme/promodise/images/market/headers.jpg">
+                    </div>
+                    <div class="tab-pane" id="hero" role="tabpanel" aria-labelledby="hero-tab">
+                        <img src="/theme/promodise/images/market/heros.jpg">
+                    </div>
+                    <div class="tab-pane" id="feature" role="tabpanel" aria-labelledby="feature-tab">
+                        <img src="/theme/promodise/images/market/feature.jpg">
+                    </div>
+                    <div class="tab-pane" id="slidebar" role="tabpanel" aria-labelledby="slidebar-tab">
+                        <img src="/theme/promodise/images/market/slidebar.jpg">
+                    </div>
+                    <div class="tab-pane" id="footer" role="tabpanel" aria-labelledby="footer-tab">
+                        <img src="/theme/promodise/images/market/footer.jpg">
+                    </div>
+                    <div class="tab-pane" id="dropdown" role="tabpanel" aria-labelledby="dropdown-tab">
+                        <img src="/theme/promodise/images/market/dropdown.jpg">
+                    </div>
+                    <div class="tab-pane" id="list-group" role="tabpanel" aria-labelledby="list-group-tab">
+                        <img src="/theme/promodise/images/market/list-group.jpg">
+                    </div>
+                    <div class="tab-pane" id="modal" role="tabpanel" aria-labelledby="modal-tab">
+                        <img src="/theme/promodise/images/market/modal.jpg">
+                    </div>
+                </div>
             </div>
         </div>
         <hr>
-        <div class="row">
-            결과 화면이 나올 자리
+        <div class="row py-5">
+            <div class="h2 py-5">결과 화면</div>
+            <div class="card">
+                <img src="/theme/promodise/images/market/output.jpg">
+            </div>
+        </div>
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-success">의뢰서 제출하기</button>
         </div>
     </div>
 </section>

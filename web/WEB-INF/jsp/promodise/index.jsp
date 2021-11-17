@@ -13,7 +13,7 @@
                             <h2 class="banner-title">아보카도 콘솔에 오신 것을 환영합니다.</h2>
                             <p>아보카도 콘솔은 소상공인과 중소기업을 위한 웹페이지 제작 플렛폼입니다.</p>
 
-                            <a href="#" class="btn btn-white btn-circled">lets start</a>
+                            <a href="market.avocado" class="btn btn-white btn-circled">lets start</a>
                         </div>
                     </div>
                 </div>
