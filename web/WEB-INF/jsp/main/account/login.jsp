@@ -30,9 +30,38 @@
             $('#password_hash').val(SHA256(forsha));
         }
     </script>
+        <script>
+            function onSignIn(googleUser) {
+                var profile = googleUser.getBasicProfile();
+                console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+                console.log('Full Name: ' + profile.getName());
+                console.log('Given Name: ' + profile.getGivenName());
+                console.log('Family Name: ' + profile.getFamilyName());
+                console.log('Image URL: ' + profile.getImageUrl());
+                console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+                var id_token = googleUser.getAuthResponse().id_token;
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', 'googleLogin.avocado');
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xhr.onload = function () {
+                    // console.log('Signed in as: ' + xhr.responseText);
+                    if (xhr.responseText == 'success'){
+                        window.location.href = 'main.avocado';
+
+                    }
+                    else if (xhr.responseText == 'register'){
+                        window.location.href = 'signup.avocado'
+                    }
+                    else {
+                        alert("잘못된 정보");
+                    }
+                };
+                xhr.send('idtoken=' + id_token);
+            }
+        </script>
 
 
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
     <%--    Bootstrap--%>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -43,6 +72,10 @@
     <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
 
     <meta name="theme-color" content="#7952b3">
+        <!-- content에 자신의 OAuth2.0 클라이언트ID를 넣습니다. -->
+        <meta name="google-signin-client_id"
+              content="470641167664-66ck3v2987td9ok4tdrji3vong8iv94i.apps.googleusercontent.com">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
 
 
     <style>
@@ -135,6 +168,9 @@
         </div>
     <p class="mt-5 mb-3 text-muted"><a href="main.avocado">Avocado ConSol &copy; 2017–2021</a></p>
     </form>
+    <%--        구글 로그인 버튼 --%>
+    <div class="g-signin2 d-flex justify-content-center" data-onsuccess="onSignIn"></div>
+    <%--구글 로그인 버튼 끝--%>
 </main>
 
 
