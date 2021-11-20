@@ -6,7 +6,12 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    String user = (String)session.getAttribute("user");
+    String type = (String)session.getAttribute("type");
+%>
 <head>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -79,8 +84,28 @@
                 <li class="nav-item">
                     <a class="nav-link smoth-scroll" href="contact.jsp">Contact</a>
                 </li>
+                <li class="nav-item" id="loginInfo"></li>
             </ul>
         </div>
     </div>
 </nav>
 <!--MAIN HEADER AREA END -->
+<script>
+    $(document).ready(function () {
+        makeLoginInfo();
+    })
+
+    function makeLoginInfo() {
+        let user = <%=user%>;
+        let card = $('#loginInfo');
+        let text = '';
+        if (user == null) {
+            text += '<a class="nav-link smoth-scroll" href="loginPage.avocado">Login</a>'
+        } else {
+            text += '<a class="nav-link smoth-scroll" href="logout.avocado">Logout</a>'
+        }
+
+
+        card.append(text);
+    }
+</script>

@@ -130,3 +130,27 @@
 </header>
 
 <!-- Header Close -->
+<script>
+    $(document).ready(function () {
+        makeLoginInfo();
+    })
+
+    function makeLoginInfo() {
+        let user = <%=user%>;
+        let card = $('#loginInfo');
+        let text = '';
+        if (user == null) {
+            text += '<a class="btn btn-primary btn-xl text-uppercase" href="loginPage.avocado">로그인</a>'
+        } else {
+            if (user.type == '전체관리자') {
+                text += '<a href="">관리자페이지</a>'
+            } else {
+                text += '<a href="">마이페이지</a>'
+            }
+            text += '<a class="btn btn-primary btn-xl text-uppercase" href="logout.avocado">로그아웃</a>'
+        }
+
+
+        card.append(text);
+    }
+</script>
