@@ -22,7 +22,8 @@ public class UserDAO {
             it = new UserDAO();
         return it;
     }
-    public String addUser(String data) {
+    public String addUser(String data, String google_id) {
+
         String [] arr = data.split("-/-/-"); // 받아온 한 줄짜리 데이터를 배열로 쪼개기
         String id = arr[0];
         String pw = arr[1];
@@ -35,7 +36,6 @@ public class UserDAO {
         String image = arr[8];
         String home = arr[9];
         String time = arr[10];
-        String google_id = arr[11];
         Connection conn = Config.getInstance().sqlLogin();
         try {
             QueryRunner queryRunner = new QueryRunner();
@@ -114,6 +114,7 @@ public class UserDAO {
         }
     }
     public UserDTO getGoogleUser(String google_id){
+        System.out.println(google_id);
         List<Map<String, Object>> listOfMaps = null;
         Connection conn = Config.getInstance().sqlLogin();
         try {
@@ -124,6 +125,8 @@ public class UserDAO {
         } finally {
             DbUtils.closeQuietly(conn);
         }
+        System.out.println(listOfMaps);
+        System.out.println(google_id);
         Gson gson = new Gson();
         ArrayList<UserDTO> selected = gson.fromJson(gson.toJson(listOfMaps), new TypeToken<List<UserDTO>>() {}.getType());
         if(selected.size()>0) {

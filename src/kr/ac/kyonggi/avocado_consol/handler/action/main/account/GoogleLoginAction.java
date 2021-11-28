@@ -76,10 +76,11 @@ public class GoogleLoginAction implements Action {
                 session.setAttribute("type", gson.toJson(type));
                 session.setAttribute("miss", 0);
                 return "success";
-
             } else {
 //                System.out.println("구글 아이디는 존재하나, 서버 DB에 회원 정보가 없음. 회원가입으로 이동");
                 session.setAttribute("google_id", userId);
+                String test = (String) session.getAttribute("google_id");
+                System.out.println("aaaaa"+test);
                 session.setAttribute("google_name", name);
                 session.setAttribute("google_email", email);
                 session.setAttribute("google_imageUrl", imageUrl);

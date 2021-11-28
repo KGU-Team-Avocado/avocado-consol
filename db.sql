@@ -42,7 +42,7 @@ CREATE TABLE user(
                      PRIMARY KEY (`oid`)
 
 );
-INSERT INTO user(oid, id, password, name, birthday, email, gender, phone, type, image_url, home, google_id) VALUES(0, 'admin', 'd82494f05d6917ba02f7aaa29689ccb444bb73f20380876cb05d1f37537b7892','관리자','2021-11-10','admin@email.com','무','010-0000-0000','전체관리자', '', '','118011962661211748557');
+INSERT INTO user(oid, id, password, name, birthday, email, gender, phone, type, image_url, home, google_id) VALUES(0, 'admin', 'd82494f05d6917ba02f7aaa29689ccb444bb73f20380876cb05d1f37537b7892','관리자','2021-11-10','admin@email.com','무','010-0000-0000','전체관리자', '', '','104122344254136509261');
 
 CREATE TABLE type (
                      `name` VARCHAR (10) NOT NULL,

@@ -33,7 +33,8 @@ public class AjaxAction implements Action {
 
         switch(req) {
             case "signup":
-                result= UserDAO.getInstance().addUser(data);
+                String google_id = (String) session.getAttribute("google_id");
+                result= UserDAO.getInstance().addUser(data, google_id);
                 break;
             case "insertBbs":
                 System.out.println(data);

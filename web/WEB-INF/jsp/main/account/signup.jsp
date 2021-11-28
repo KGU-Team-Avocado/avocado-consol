@@ -10,6 +10,7 @@
    String user_name = (String) session.getAttribute("google_name");
    String user_email = (String) session.getAttribute("google_email");
    String user_imageUrl = (String) session.getAttribute("google_imageUrl");
+    System.out.println(user_id);
     %>
 <html>
 <head>
@@ -122,9 +123,9 @@
         let image = $('#image').val();
         let home = $('#home').val();
         let time = new Date();
-        let google_id = <%=user_id%>
         let text = id+'-/-/-'+hashcode+'-/-/-'+name+'-/-/-'+Birthday+'-/-/-'+gender+'-/-/-'
-            +email+'-/-/-'+phone+'-/-/-'+type+'-/-/-'+image+'-/-/-'+home+'-/-/-'+time+'-/-/-'+google_id;
+            +email+'-/-/-'+phone+'-/-/-'+type+'-/-/-'+image+'-/-/-'+home+'-/-/-'+time;
+        alert(text);
         $.ajax({
                 url:"ajax.avocado",
                 type : "POST",
