@@ -34,7 +34,7 @@ CREATE TABLE user(
                      `gender` VARCHAR (5),
                      `phone` VARCHAR (20),
                      `type` VARCHAR (10) NOT NULL,
-                     `image_url` VARCHAR (50),
+                     `image_url` VARCHAR (1000),
                      `home` VARCHAR (100),
                      `register` DATE DEFAULT NULL,
                      `lastlogin` DATE DEFAULT NULL,
