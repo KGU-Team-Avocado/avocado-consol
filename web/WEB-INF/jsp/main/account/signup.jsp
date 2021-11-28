@@ -6,6 +6,11 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% String user_id = (String) session.getAttribute("google_id");
+   String user_name = (String) session.getAttribute("google_name");
+   String user_email = (String) session.getAttribute("google_email");
+   String user_imageUrl = (String) session.getAttribute("google_imageUrl");
+    %>
 <html>
 <head>
     <script src="/theme/main/js/sha256.js"></script>
@@ -17,7 +22,7 @@
 <div class="row g-3 needs-validation" novalidate>
     <div class="col-md-4">
         <label for="id" class="form-label">id</label>
-        <input type="text" class="form-control" id="id" value="Mark" required>
+        <input type="text" class="form-control" id="id" value=Mark required>
         <div class="valid-feedback">
             Looks good!
         </div>
@@ -33,7 +38,7 @@
         <label for="name" class="form-label">name</label>
         <div class="input-group has-validation">
             <span class="input-group-text" id="inputGroupPrepend">@</span>
-            <input type="text" class="form-control" id="name" aria-describedby="inputGroupPrepend" required>
+            <input type="text" class="form-control" id="name" aria-describedby="inputGroupPrepend" value = <%=user_name%> readonly required>
             <div class="invalid-feedback">
                 Please choose a username.
             </div>
@@ -59,7 +64,7 @@
     </div>
     <div class="col-md-6">
         <label for="email" class="form-label">e-mail</label>
-        <input type="text" class="form-control" id="email" required>
+        <input type="text" class="form-control" id="email" value=<%=user_email%> readonly required>
         <div class="invalid-feedback">
             Please provide a valid city.
         </div>
@@ -84,7 +89,7 @@
     </div>
     <div class="col-md-6">
         <label for="image" class="form-label">image</label>
-        <input type="text" class="form-control" id="image" required>
+        <input type="text" class="form-control" id="image" value=<%=user_imageUrl%> readonly required>
         <div class="invalid-feedback">
             Please provide a valid city.
         </div>
@@ -117,7 +122,9 @@
         let image = $('#image').val();
         let home = $('#home').val();
         let time = new Date();
-        let text = id+'-/-/-'+hashcode+'-/-/-'+name+'-/-/-'+Birthday+'-/-/-'+gender+'-/-/-'+email+'-/-/-'+phone+'-/-/-'+type+'-/-/-'+image+'-/-/-'+home+'-/-/-'+time;
+        let google_id = <%=user_id%>
+        let text = id+'-/-/-'+hashcode+'-/-/-'+name+'-/-/-'+Birthday+'-/-/-'+gender+'-/-/-'
+            +email+'-/-/-'+phone+'-/-/-'+type+'-/-/-'+image+'-/-/-'+home+'-/-/-'+time+'-/-/-'+google_id;
         $.ajax({
                 url:"ajax.avocado",
                 type : "POST",

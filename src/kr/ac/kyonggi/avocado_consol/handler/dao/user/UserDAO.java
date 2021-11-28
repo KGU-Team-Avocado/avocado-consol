@@ -35,12 +35,13 @@ public class UserDAO {
         String image = arr[8];
         String home = arr[9];
         String time = arr[10];
+        String google_id = arr[11];
         Connection conn = Config.getInstance().sqlLogin();
         try {
             QueryRunner queryRunner = new QueryRunner();
             queryRunner.update(conn,
-                    "INSERT INTO `user`(id, password, name, birthday, gender, email, phone, type, image_url, home) " +
-                            "VALUES (?,?,?,?,?,?,?,?,?,?)", id,pw,name,Birthday,gender,email,phone,type,image,home);
+                    "INSERT INTO `user`(id, password, name, birthday, gender, email, phone, type, image_url, home, google_id) " +
+                            "VALUES (?,?,?,?,?,?,?,?,?,?,?)", id,pw,name,Birthday,gender,email,phone,type,image,home,google_id);
         }
         catch (SQLException se){
             se.printStackTrace();

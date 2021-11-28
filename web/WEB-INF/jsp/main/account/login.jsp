@@ -15,6 +15,7 @@
     <script src="/theme/main/js/sha256.js"></script>
 
     <script>
+        document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
         function letsSubmit() {
             if($('#id').val() != '' && $('#password').val() != ''){
                 doSha();
@@ -47,7 +48,6 @@
                     // console.log('Signed in as: ' + xhr.responseText);
                     if (xhr.responseText == 'success'){
                         window.location.href = 'main.avocado';
-
                     }
                     else if (xhr.responseText == 'register'){
                         window.location.href = 'signup.avocado'

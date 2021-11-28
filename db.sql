@@ -43,6 +43,9 @@ CREATE TABLE user(
 
 );
 INSERT INTO user(oid, id, password, name, birthday, email, gender, phone, type, image_url, home, google_id) VALUES(0, 'admin', 'd82494f05d6917ba02f7aaa29689ccb444bb73f20380876cb05d1f37537b7892','관리자','2021-11-10','admin@email.com','무','010-0000-0000','전체관리자', '', '','118011962661211748557');
+
+INSERT INTO user(oid, id, password, name, birthday, email, gender, phone, type, image_url, home, google_id) VALUES(0, 'admin', 'd82494f05d6917ba02f7aaa29689ccb444bb73f20380876cb05d1f37537b7892','관리자','2021-11-10','admin@email.com','무','010-0000-0000','전체관리자', 'https://lh3.googleusercontent.com/a/AATXAJxgP6p-_2wssUEVCxgDX5oukWJyuuHUQ4GL2MUC=s96-c', '','118011962661211748557');
+
 CREATE TABLE type (
                      `name` VARCHAR (10) NOT NULL,
                      `level` INT(2) NOT NULL
@@ -59,7 +62,7 @@ CREATE TABLE team (
                       `oid` INT(10) NOT NULL AUTO_INCREMENT,
                       `name` VARCHAR(20) NOT NULL,
                       `group_name` VARCHAR (100) NOT NULL,
-                      `image_url` VARCHAR (100) DEFAULT '#',
+                      `image_url` VARCHAR (4000) DEFAULT '#',
                       `description` VARCHAR(200) DEFAULT '#',
                       `instagram` VARCHAR (100) DEFAULT '#',
                       `blog` VARCHAR (100) DEFAULT '#',

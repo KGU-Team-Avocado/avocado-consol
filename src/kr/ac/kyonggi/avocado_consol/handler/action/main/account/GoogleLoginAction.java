@@ -52,6 +52,7 @@ public class GoogleLoginAction implements Action {
             String email = jsonObj.get("email").toString();
             String imageUrl = jsonObj.get("picture").toString();
 
+
             System.out.println(userId);
             System.out.println(name);
             System.out.println(email);
